@@ -1,6 +1,6 @@
 # Quantum Quill feature roadmap
 
-Status checked October 24, 2026. Feature checkpoint: October 24, 2026 (`7a3f09d5193eb57a3a8e5c5d4f5786568af1ad30`).
+Status checked October 24, 2026. Feature checkpoint: October 24, 2026 (`a09d6d099898b843094b8127e5223898dbc1c499`).
 
 A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.
 
@@ -8,21 +8,21 @@ Canonical private repository: https://github.com/drsurfbum/quantum-quill-app
 
 This is a manually maintained snapshot, not live sync. Working locally is not a deployment or main-branch merge claim. No delivery dates or percentage-complete estimate are assigned.
 
-October 24: 391 tests across 38 suites, TypeScript, production build, and an 18-table paired restore rehearsal passed locally, including admin access and status persistence. The public alpha and private maintainer inbox are live, with owner access explicitly enabled. Source remains on feature branches, not merged to main.
+October 24: QQ-14 is implemented and backed up on codex/workspace-integration. The complete tests, TypeScript, production build and disposable PostgreSQL/restore workflow passed at 6c59300; application code is unchanged in the later browser-test refinements. Real Chromium verification passed 16 checks at a09d6d0, covering all seven types, imported/unknown values, explicit connections and 390px screens. QQ-14 is not merged to main or deployed. The public alpha and maintainer inbox remain at the earlier verified release.
 
 ## Milestones
 
 - **M0 — Protect the writing · Foundation working**: Reliable saves, recoverable drafts, ownership and compatible data reads.
 - **M1 — Finish the novel workflow · Workflow working**: Plan, organize, write and export without losing momentum.
-- **M2 — Make the world easier to build · Next focus**: Guided entries, useful connections, character development and research.
+- **M2 — Make the world easier to build · Guided entries on branch**: Guided entries implemented on a feature branch; character development, research and broader world-building work remain ahead.
 - **M3 — Open alpha & feedback · Alpha live; hardening continues**: Real-world testing with private reports, dependable hosting and restore rehearsals.
 - **M4 — More ways to tell stories · Later**: Broader formats and optional advanced tools, after the novel foundation.
 
 ## Keep in view
 
-- **The open alpha is live**: Create a new account to try Quantum Quill. Use Feedback inside the app for private reports; no GitHub account is needed. Local accounts and recovered manuscripts were not copied to the alpha.
+- **The open alpha is live**: Create a new account to try Quantum Quill. Use Feedback inside the app for private reports; no GitHub account is needed. Each writer’s account and writing remain private.
 - **Keep legacy conversion deliberate**: Four older entries still need a destination decision; two classification conflicts and orphan planning records remain preserved. Compatibility reads work. No destructive migration is approved.
-- **A local alpha, with clear boundaries**: The save protections and core workflow are working locally. Full offline app loading, collaboration, a general Notion sync and public deployment are not complete.
+- **Feature branches and the live alpha differ**: QQ-14 guided entries are implemented on a private feature branch. The hosted alpha remains at the earlier release until a separate deployment. Full offline app loading, collaboration and general Notion sync remain future work.
 
 ## Features
 
@@ -250,20 +250,21 @@ Export real Word, HTML, plain text, EPUB and original-record JSON files.
 
 ### QQ-14 — A more guided Story Bible
 
-**Recommended next · Story Bible**
+**Working locally · Story Bible**
 
 Make it obvious what each element is for, which fields matter first, and how to develop it.
 
-- Explain purpose and show examples for all seven types, inspired by the WBB workflow.
-- Separate essential facts from optional depth; suggest relevant next connections.
+- Explain the purpose of all seven existing types with concrete examples and overlap guidance, including Details versus Research versus World Elements.
+- Create an unfinished entry with only a name and type; develop it through Start here and optional field groups, with examples that never become authored content.
+- Offer optional connection ideas through the shared picker, retaining specialized fields, imported sources, unknown values and existing save/recovery protections.
 
-**Boundary:** Existing forms and basic guidance work. The complete guided entry-creation experience is not yet implemented.
+**Boundary:** Implemented on private feature branch codex/workspace-integration; not merged to main or deployed to the public alpha. The character workbench, timeline, research library and project-wide scanner remain separate roadmap items. Guidance can be hidden and never requires a questionnaire or completion score.
 
 **Acceptance:** A new writer can create and develop an element without guessing field meaning; every existing field, link and recovered original still round-trips.
 
 **Prerequisites:** QQ-09
 
-**Evidence / basis:** User-approved direction; docs/ANTIGRAVITY_STORY_BIBLE_INTEGRATION.md
+**Evidence / basis:** October 24, 2026: private feature code a09d6d099898b843094b8127e5223898dbc1c499. Full stabilization passed at 6c59300 (application source unchanged afterward); all 16 synthetic Chromium checks passed at a09d6d0. Includes regression coverage for partial creation, mounted fields, examples, imports and explicit connections. See docs/GUIDED_STORY_BIBLE.md in the private app repository.
 
 ### QQ-15 — Develop characters with intention
 
@@ -530,6 +531,7 @@ Report bugs, confusing experiences and ideas from inside QQ without leaving your
 - October 24: public GitHub introduction, actual-app screenshots and tester feedback guide published. Open-registration Render alpha is prepared and locally checked; launch is on hold. No live app URL is advertised before verification.
 - October 24: open-registration alpha launched on Render, with private in-app feedback. The user approved $13.55/month base hosting after an earlier hold. SDH Studio, original sources and recovered manuscripts remain unchanged.
 - October 24: private maintainer inbox activated in the hosted alpha. Feedback can be reviewed and its status updated inside QQ; account permissions remain explicitly controlled.
+- October 24: QQ-14 guided Story Bible implemented and backed up on a private feature branch, with full validation and synthetic desktop/compact browser evidence. The public alpha has not been updated with QQ-14; main is unchanged.
 
 ## Maintenance
 

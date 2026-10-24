@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Quantum Quill's feature roadmap: what works locally, what comes next, and the path to a dependable storytelling workspace.">
+<meta name="description" content="Quantum Quill's feature roadmap: implemented features, deployed alpha scope, and what comes next.">
 <meta http-equiv="Content-Security-Policy" content="__CSP__">
 <meta name="color-scheme" content="light">
 <title>Quantum Quill · Feature roadmap</title>
@@ -33,7 +33,7 @@
 <div class="cards" id="cards" aria-label="Roadmap feature cards"></div><div class="empty" id="empty" hidden><h3>No matching features</h3><p>Try another word, area or status.</p><button class="button" id="reset">Clear filters</button></div>
 <noscript><p class="noscript">This interactive view needs JavaScript. The accompanying ROADMAP.md contains the complete readable feature roadmap.</p></noscript>
 </section>
-<footer class="footer"><div><h2>How this roadmap stays accurate</h2><p>This is a manually maintained snapshot of the local app, implementation reports and reviewed import receipts. Refreshing the page does not fetch new project status. Update it after a feature is accepted or a checkpoint is synced.</p><p id="validation"></p><p>Also saved for later: reconstruct the long history of Quantum Quill from its surviving versions and archives.</p></div><div><h2>The agreement behind the work</h2><p>Keep the prose central. Planning is optional. Preserve formatting, original source material, recoverable drafts and explicit conflict review. Build the novel workflow before broadening the format.</p><p>This page does not edit Quantum Quill, GitHub or story data. <a id="reference" target="_blank" rel="noopener noreferrer">Format inspired by the BIMCraft roadmap ↗</a></p></div></footer>
+<footer class="footer"><div><h2>How this roadmap stays accurate</h2><p>This is a manually maintained snapshot of the app’s feature branches, verified alpha, implementation reports and reviewed import receipts. Refreshing the page does not fetch new project status. Update it after a feature is accepted or a checkpoint is synced.</p><p id="validation"></p><p>Also saved for later: reconstruct the long history of Quantum Quill from its surviving versions and archives.</p></div><div><h2>The agreement behind the work</h2><p>Keep the prose central. Planning is optional. Preserve formatting, original source material, recoverable drafts and explicit conflict review. Build the novel workflow before broadening the format.</p><p>This page does not edit Quantum Quill, GitHub or story data. <a id="reference" target="_blank" rel="noopener noreferrer">Format inspired by the BIMCraft roadmap ↗</a></p></div></footer>
 </main>
 <script id="roadmap-data" type="application/json">__DATA__</script>
 <script>
@@ -46,7 +46,7 @@ const totals=Object.fromEntries(data.statuses.map(s=>[s.id,data.features.filter(
 byId('intro').textContent=data.summary;byId('alpha-app').href=data.appUrl;byId('repo').href='https://github.com/drsurfbum/quantum-quill-roadmap';byId('reference').href=data.reference;byId('validation').textContent=data.validation;
 const checks=[`Progress checked ${data.checked}`,`GitHub checkpoint ${data.remoteCommit} · features ${data.featureCheckpoint}`,`Snapshot · not live sync`];
 checks.forEach((t,i)=>{const n=el('span');if(i===0)n.append(el('span','','dot'));n.append(document.createTextNode(t));byId('checkpoint').append(n);});
-[[totals.local+(totals.alpha||0),'Features working','Local or alpha; see each card'],[totals.partial,'First slices working','Useful now; broader work remains'],[totals.next,'Recommended next','Guidance + a real-story walkthrough'],[totals.review+totals.planned+totals.later,'Future & review cards','Includes one legacy-data decision']].forEach(([n,l,h])=>{const d=el('div',undefined,'stat');d.append(el('b',String(n)),el('span',l),el('small',h));byId('stats').append(d);});
+[[totals.local+(totals.alpha||0),'Features working','Local, branch or alpha; see cards'],[totals.partial,'First slices working','Useful now; broader work remains'],[totals.next,'Recommended next','Character workbench + story QA'],[totals.review+totals.planned+totals.later,'Future & review cards','Includes one legacy-data decision']].forEach(([n,l,h])=>{const d=el('div',undefined,'stat');d.append(el('b',String(n)),el('span',l),el('small',h));byId('stats').append(d);});
 data.milestones.forEach(m=>{const d=el('article',undefined,'milestone');d.dataset.tone=m.tone;d.append(el('small',m.id),el('h3',m.title),el('p',m.description),el('span',m.state,`pill ${m.tone}`));byId('milestones').append(d);});
 data.attention.forEach(a=>{const d=el('div');d.append(el('small',a.label),el('h3',a.title),el('p',a.text));if(a.feature){const link=el('a',`Review ${a.feature} ↗`);link.href=`#${a.feature}`;d.append(link);}byId('attention').append(d);});
 const cardNodes=[];
