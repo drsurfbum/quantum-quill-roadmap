@@ -1,0 +1,5 @@
+dist/
+preview.png
+verification.json
+__pycache__/
+.DS_Store
