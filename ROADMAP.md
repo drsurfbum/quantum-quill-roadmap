@@ -1,6 +1,6 @@
 # Quantum Quill feature roadmap
 
-Status checked October 24, 2026. Feature checkpoint: October 24, 2026 (`0067b97`).
+Status checked October 24, 2026. Feature checkpoint: October 24, 2026 (`c0f5371c6ed68cbdb182175978673995152d4394`).
 
 A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.
 
