@@ -1,6 +1,6 @@
 # Quantum Quill feature roadmap
 
-Status checked October 23, 2026. Feature checkpoint: October 14, 2026 (`41ca287`).
+Status checked October 23, 2026. Feature checkpoint: October 23, 2026 (`0067b97`).
 
 A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.
 
@@ -8,7 +8,7 @@ Canonical private repository: https://github.com/drsurfbum/quantum-quill-app
 
 This is a manually maintained snapshot, not live sync. Working locally is not a deployment or main-branch merge claim. No delivery dates or percentage-complete estimate are assigned.
 
-Fresh verification October 23: all 380 tests across 36 suites, TypeScript and the production build passed. Both feature branches are backed up on GitHub; main is unchanged.
+Full regression checkpoint 41ca287 passed all 380 tests across 36 suites, TypeScript, production build and GitHub checks on October 23. The subsequent roadmap shortcut passed a fresh type check, production build and browser walkthrough; writing and save logic are unchanged.
 
 ## Milestones
 
@@ -20,7 +20,7 @@ Fresh verification October 23: all 380 tests across 36 suites, TypeScript and th
 
 ## Keep in view
 
-- **Feature work is backed up**: The latest feature work is pushed to the private GitHub feature branches. Completed features will be committed and pushed as a standing practice; merging remains a separate decision. Continue with a sustained writer walkthrough before a hosted alpha.
+- **Follow along from the workspace**: The public roadmap is now one quiet link away: at the right edge of the workspace navigation and at the bottom of the dashboard sidebar. It opens a separate tab, keeping your writing in place. Completed features are pushed to GitHub; merging stays a separate decision.
 - **Keep legacy conversion deliberate**: Four older entries still need a destination decision; two classification conflicts and orphan planning records remain preserved. Compatibility reads work. No destructive migration is approved.
 - **A local alpha, with clear boundaries**: The save protections and core workflow are working locally. Full offline app loading, collaboration, a general Notion sync and public deployment are not complete.
 
@@ -153,6 +153,7 @@ Keep prose central, with a compact manuscript navigator and separate scene/conte
 
 - Shared workspace navigation and a responsive, single-row formatting bar.
 - Reserved save-status space and context panels that preserve editor state.
+- A discreet roadmap link in workspace navigation and the dashboard sidebar opens a separate tab without leaving the writing session.
 
 **Boundary:** Broader browser, mobile and input-method testing is still needed before a release claim.
 
@@ -160,7 +161,7 @@ Keep prose central, with a compact manuscript navigator and separate scene/conte
 
 **Prerequisites:** QQ-07
 
-**Evidence / basis:** docs/WORKSPACE_INTEGRATION.md; workspace writing tests and fixture walkthrough
+**Evidence / basis:** docs/WORKSPACE_INTEGRATION.md; workspace writing tests and fixture walkthrough; October 23 roadmap shortcut (0067b97): type check, production build and browser walkthrough
 
 ### QQ-09 — A readable Story Bible library
 
@@ -505,6 +506,7 @@ Adapt the writing organizer for RPG campaigns, scripts, plays and historical sto
 ## Project notes
 
 - Later: reconstruct the history of Quantum Quill from its surviving versions, archives and development records. This is a separate storytelling project, not a prerequisite for the alpha.
+- October 23: public GitHub Pages roadmap published; eight actual-app screenshots prepared using original fictional sample content for alpha recruitment. The application itself remains a local alpha.
 
 ## Maintenance
 

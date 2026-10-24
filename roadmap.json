@@ -1,13 +1,13 @@
 {
   "title": "Quantum Quill",
   "checked": "October 23, 2026",
-  "featureCheckpoint": "October 14, 2026",
-  "localCommit": "41ca287",
-  "remoteCommit": "41ca287",
+  "featureCheckpoint": "October 23, 2026",
+  "localCommit": "0067b97",
+  "remoteCommit": "0067b97",
   "repository": "https://github.com/drsurfbum/quantum-quill-app",
   "reference": "https://drsurfbum.github.io/bimcraft-SDH/",
   "summary": "A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.",
-  "validation": "Fresh verification October 23: all 380 tests across 36 suites, TypeScript and the production build passed. Both feature branches are backed up on GitHub; main is unchanged.",
+  "validation": "Full regression checkpoint 41ca287 passed all 380 tests across 36 suites, TypeScript, production build and GitHub checks on October 23. The subsequent roadmap shortcut passed a fresh type check, production build and browser walkthrough; writing and save logic are unchanged.",
   "statuses": [
     {
       "id": "local",
@@ -111,9 +111,10 @@
   ],
   "attention": [
     {
-      "title": "Feature work is backed up",
-      "text": "The latest feature work is pushed to the private GitHub feature branches. Completed features will be committed and pushed as a standing practice; merging remains a separate decision. Continue with a sustained writer walkthrough before a hosted alpha.",
-      "label": "Checkpoint preserved"
+      "title": "Follow along from the workspace",
+      "text": "The public roadmap is now one quiet link away: at the right edge of the workspace navigation and at the bottom of the dashboard sidebar. It opens a separate tab, keeping your writing in place. Completed features are pushed to GitHub; merging stays a separate decision.",
+      "label": "Roadmap within reach",
+      "feature": "QQ-08"
     },
     {
       "title": "Keep legacy conversion deliberate",
@@ -255,14 +256,15 @@
       "summary": "Keep prose central, with a compact manuscript navigator and separate scene/context panes.",
       "scope": [
         "Shared workspace navigation and a responsive, single-row formatting bar.",
-        "Reserved save-status space and context panels that preserve editor state."
+        "Reserved save-status space and context panels that preserve editor state.",
+        "A discreet roadmap link in workspace navigation and the dashboard sidebar opens a separate tab without leaving the writing session."
       ],
       "boundary": "Broader browser, mobile and input-method testing is still needed before a release claim.",
       "acceptance": "Opening cards or plans does not push prose down, reset the editor or remove formatting tools.",
       "depends": [
         "QQ-07"
       ],
-      "evidence": "docs/WORKSPACE_INTEGRATION.md; workspace writing tests and fixture walkthrough"
+      "evidence": "docs/WORKSPACE_INTEGRATION.md; workspace writing tests and fixture walkthrough; October 23 roadmap shortcut (0067b97): type check, production build and browser walkthrough"
     },
     {
       "id": "QQ-09",
@@ -622,6 +624,7 @@
     }
   ],
   "projectNotes": [
-    "Later: reconstruct the history of Quantum Quill from its surviving versions, archives and development records. This is a separate storytelling project, not a prerequisite for the alpha."
+    "Later: reconstruct the history of Quantum Quill from its surviving versions, archives and development records. This is a separate storytelling project, not a prerequisite for the alpha.",
+    "October 23: public GitHub Pages roadmap published; eight actual-app screenshots prepared using original fictional sample content for alpha recruitment. The application itself remains a local alpha."
   ]
 }
