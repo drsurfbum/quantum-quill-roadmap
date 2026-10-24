@@ -1,0 +1,35 @@
+name: Alpha feedback
+description: Tell us what helped, what was confusing, or what broke.
+title: "[Alpha] "
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for trying Quantum Quill. This report is public: use sample text and remove account details from screenshots. For a possible security or account-access problem, contact the maintainer privately through your tester contact channel."
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of feedback is this?
+      options:
+        - Something did not work
+        - Something was confusing
+        - Feature idea
+        - Something worked well
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      placeholder: "For example: Safari on an iPad, Chrome on Windows"
+  - type: textarea
+    id: experience
+    attributes:
+      label: What were you trying to do?
+      description: "Include the screen, steps, what you expected, and what happened."
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Sample or screenshot (optional)
+      description: "Please don't include private manuscripts, passwords, email addresses, or other account details."

@@ -1,6 +1,6 @@
 # Quantum Quill feature roadmap
 
-Status checked October 23, 2026. Feature checkpoint: October 23, 2026 (`0067b97`).
+Status checked October 24, 2026. Feature checkpoint: October 24, 2026 (`0067b97`).
 
 A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.
 
@@ -8,7 +8,7 @@ Canonical private repository: https://github.com/drsurfbum/quantum-quill-app
 
 This is a manually maintained snapshot, not live sync. Working locally is not a deployment or main-branch merge claim. No delivery dates or percentage-complete estimate are assigned.
 
-Full regression checkpoint 41ca287 passed all 380 tests across 36 suites, TypeScript, production build and GitHub checks on October 23. The subsequent roadmap shortcut passed a fresh type check, production build and browser walkthrough; writing and save logic are unchanged.
+The alpha preparation passed 383 tests across 37 suites, TypeScript, and the production build locally on October 24. A clean production-only install also passed fresh database initialization, account isolation, conflict, restart, export and paired restore checks. Live Render verification remains pending.
 
 ## Milestones
 
@@ -20,7 +20,7 @@ Full regression checkpoint 41ca287 passed all 380 tests across 36 suites, TypeSc
 
 ## Keep in view
 
-- **Follow along from the workspace**: The public roadmap is now one quiet link away: at the right edge of the workspace navigation and at the bottom of the dashboard sidebar. It opens a separate tab, keeping your writing in place. Completed features are pushed to GitHub; merging stays a separate decision.
+- **Preparing an open alpha**: The public GitHub introduction now includes app screenshots and a tester walkthrough. A separate Render app is prepared for open registration; hosting approval and live verification are still required before there is a test link.
 - **Keep legacy conversion deliberate**: Four older entries still need a destination decision; two classification conflicts and orphan planning records remain preserved. Compatibility reads work. No destructive migration is approved.
 - **A local alpha, with clear boundaries**: The save protections and core workflow are working locally. Full offline app loading, collaboration, a general Notion sync and public deployment are not complete.
 
@@ -401,22 +401,23 @@ Validate longer manuscripts and realistic formatting in the tools readers and wr
 
 **Evidence / basis:** docs/STABILIZATION_CLOSEOUT.md, publishing QA boundaries
 
-### QQ-23 — A private home on Render
+### QQ-23 — An open alpha on Render
 
-**Planned · Publishing & release**
+**First slice working · Publishing & release**
 
-Make a reviewed version available away from this Mac with reliable storage and recovery.
+Prepare a separate hosted app where testers can register their own accounts and try Quantum Quill.
 
-- Review dependencies/security, proxy/session behavior and durable upload access/storage.
-- Rehearse staging backup/restore, save conflicts and failures; choose a modest operating cost and rollback plan.
+- Open registration selected. Dedicated app, PostgreSQL database and persistent uploads are prepared; recovered manuscripts stay local.
+- Fresh-database and production-runtime rehearsal covers saves, conflicts, account isolation, restart persistence and paired restore.
+- Publish the verified tester link after workspace, hosting-cost and live-deployment checks.
 
-**Boundary:** No QQ Render service has been deployed. Deployment and any destructive data migration require separate review; no language rewrite is planned.
+**Boundary:** Deployment preparation is checked locally; no live tester URL has been verified. Hosting cost and workspace confirmation remain pending. Upstream editor/validation dependency upgrades remain tracked with scoped safeguards.
 
 **Acceptance:** Staging passes real writer flows and account isolation; database/uploads restore is proven; costs and rollback are reviewed before release.
 
 **Prerequisites:** QQ-01, QQ-21, QQ-22
 
-**Evidence / basis:** docs/STABILIZATION_CLOSEOUT.md; Render is the user's preferred later host
+**Evidence / basis:** docs/HOSTED_ALPHA.md; user requested a shareable alpha and open registration on October 24
 
 ### QQ-24 — Write with a full offline workspace
 
@@ -507,6 +508,7 @@ Adapt the writing organizer for RPG campaigns, scripts, plays and historical sto
 
 - Later: reconstruct the history of Quantum Quill from its surviving versions, archives and development records. This is a separate storytelling project, not a prerequisite for the alpha.
 - October 23: public GitHub Pages roadmap published; eight actual-app screenshots prepared using original fictional sample content for alpha recruitment. The application itself remains a local alpha.
+- October 24: public GitHub introduction, actual-app screenshots and tester feedback guide prepared; open-registration Render alpha preparation is in progress. No live app URL is advertised before verification.
 
 ## Maintenance
 
