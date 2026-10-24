@@ -8,7 +8,7 @@ Canonical private repository: https://github.com/drsurfbum/quantum-quill-app
 
 This is a manually maintained snapshot, not live sync. Working locally is not a deployment or main-branch merge claim. No delivery dates or percentage-complete estimate are assigned.
 
-October 24: 391 tests across 38 suites, TypeScript, production build, and an 18-table paired restore rehearsal passed locally, including admin access and status persistence. The public alpha is live; the admin inbox is deployed with owner activation awaiting account setup. Source remains on feature branches, not merged to main.
+October 24: 391 tests across 38 suites, TypeScript, production build, and an 18-table paired restore rehearsal passed locally, including admin access and status persistence. The public alpha and private maintainer inbox are live, with owner access explicitly enabled. Source remains on feature branches, not merged to main.
 
 ## Milestones
 
@@ -515,13 +515,13 @@ Report bugs, confusing experiences and ideas from inside QQ without leaving your
 - No prose, project names, screenshots or account secrets are attached automatically. Reports are visible only to their writer and the maintainer.
 - Private admin inbox with report search, category/status filters, pagination and detailed review. Status updates appear in the tester’s own report history; stale changes are rejected.
 
-**Boundary:** Admin inbox is deployed and tested; owner access is awaiting hosted-account setup. Access must be explicitly provisioned on the server. No automatic email notifications or live-support response promise. Twenty new reports per account per day.
+**Boundary:** Admin inbox is live with explicitly provisioned maintainer access. This permission covers feedback only; it does not grant access to other writers’ manuscripts. No automatic email notifications or live-support response promise. Twenty new reports per account per day.
 
 **Acceptance:** Live submission, privacy between accounts, idempotent retry, persisted history and unchanged writing verified; feedback survives the paired database restore.
 
 **Prerequisites:** QQ-01, QQ-23
 
-**Evidence / basis:** Private report release f0b8bba; admin inbox feature 7a3f09d. 391 tests / 38 suites, production PostgreSQL checks, 18-table restore and synthetic browser review passed. See docs/FEEDBACK.md.
+**Evidence / basis:** Private report release f0b8bba; admin inbox feature 7a3f09d. 391 tests / 38 suites, production PostgreSQL checks, 18-table restore and synthetic browser review passed. Owner access activated on October 24; anonymous access denied. See docs/FEEDBACK.md.
 
 ## Project notes
 
@@ -529,6 +529,7 @@ Report bugs, confusing experiences and ideas from inside QQ without leaving your
 - October 23: public GitHub Pages roadmap published; eight actual-app screenshots prepared using original fictional sample content for alpha recruitment. The application itself remains a local alpha.
 - October 24: public GitHub introduction, actual-app screenshots and tester feedback guide published. Open-registration Render alpha is prepared and locally checked; launch is on hold. No live app URL is advertised before verification.
 - October 24: open-registration alpha launched on Render, with private in-app feedback. The user approved $13.55/month base hosting after an earlier hold. SDH Studio, original sources and recovered manuscripts remain unchanged.
+- October 24: private maintainer inbox activated in the hosted alpha. Feedback can be reviewed and its status updated inside QQ; account permissions remain explicitly controlled.
 
 ## Maintenance
 
