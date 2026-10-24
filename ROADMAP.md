@@ -1,6 +1,6 @@
 # Quantum Quill feature roadmap
 
-Status checked October 24, 2026. Feature checkpoint: October 24, 2026 (`c0f5371c6ed68cbdb182175978673995152d4394`).
+Status checked October 24, 2026. Feature checkpoint: October 24, 2026 (`f0b8bba0c939b477609e2abf44caedaa79e919b8`).
 
 A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.
 
@@ -8,19 +8,19 @@ Canonical private repository: https://github.com/drsurfbum/quantum-quill-app
 
 This is a manually maintained snapshot, not live sync. Working locally is not a deployment or main-branch merge claim. No delivery dates or percentage-complete estimate are assigned.
 
-The alpha preparation passed 383 tests across 37 suites, TypeScript, and the production build locally on October 24. A clean production-only install also passed fresh database initialization, account isolation, conflict, restart, export and paired restore checks. Live Render verification remains pending.
+October 24: 387 tests across 38 suites, TypeScript, production build, and an 18-table paired restore rehearsal passed locally. Live alpha checks passed for registration, secure sessions, saving, conflicts, account/image isolation, export, private feedback, and writing/uploads retained across deployment. Source remains on feature branches; this is an alpha release, not a main-branch merge.
 
 ## Milestones
 
 - **M0 — Protect the writing · Foundation working**: Reliable saves, recoverable drafts, ownership and compatible data reads.
 - **M1 — Finish the novel workflow · Workflow working**: Plan, organize, write and export without losing momentum.
 - **M2 — Make the world easier to build · Next focus**: Guided entries, useful connections, character development and research.
-- **M3 — A private working release · Planned**: Publishing checks, dependable hosting, storage and restore rehearsals.
+- **M3 — Open alpha & feedback · Alpha live; hardening continues**: Real-world testing with private reports, dependable hosting and restore rehearsals.
 - **M4 — More ways to tell stories · Later**: Broader formats and optional advanced tools, after the novel foundation.
 
 ## Keep in view
 
-- **Open alpha prepared; launch on hold**: The public GitHub introduction includes app screenshots and a tester walkthrough. The separate Render app is prepared for open registration. Hosting has not been activated; a test link will follow deployment and live verification.
+- **The open alpha is live**: Create a new account to try Quantum Quill. Use Feedback inside the app for private reports; no GitHub account is needed. Local accounts and recovered manuscripts were not copied to the alpha.
 - **Keep legacy conversion deliberate**: Four older entries still need a destination decision; two classification conflicts and orphan planning records remain preserved. Compatibility reads work. No destructive migration is approved.
 - **A local alpha, with clear boundaries**: The save protections and core workflow are working locally. Full offline app loading, collaboration, a general Notion sync and public deployment are not complete.
 
@@ -403,21 +403,21 @@ Validate longer manuscripts and realistic formatting in the tools readers and wr
 
 ### QQ-23 — An open alpha on Render
 
-**First slice working · Publishing & release**
+**Available in alpha · Publishing & release**
 
-Prepare a separate hosted app where testers can register their own accounts and try Quantum Quill.
+A separate hosted app where testers can register their own accounts and try Quantum Quill.
 
-- Open registration selected. Dedicated app, PostgreSQL database and persistent uploads are prepared; recovered manuscripts stay local.
-- Fresh-database and production-runtime rehearsal covers saves, conflicts, account isolation, restart persistence and paired restore.
-- Use the confirmed Render workspace when launch is authorized; publish the tester link only after live verification.
+- Open registration is live on Render with a dedicated app, PostgreSQL database and persistent uploads. Recovered manuscripts stay local.
+- Verified HTTPS sessions, writing saves, conflict rejection, account/image isolation, export and writing/uploads retained across deployment.
+- Automatic service releases and Blueprint sync are off. The reviewed base hosting cost is $13.55/month; usage overages remain possible.
 
-**Boundary:** Deployment preparation is checked locally; launch is on hold and no live tester URL exists. Hosting has not been activated. Upstream editor/validation dependency upgrades remain tracked with scoped safeguards.
+**Boundary:** Early alpha: email verification, password-reset email and self-service account deletion are not available. Public database access and storage autoscaling are disabled. Upstream editor/validation dependency upgrades remain tracked with scoped safeguards.
 
 **Acceptance:** Staging passes real writer flows and account isolation; database/uploads restore is proven; costs and rollback are reviewed before release.
 
 **Prerequisites:** QQ-01, QQ-21, QQ-22
 
-**Evidence / basis:** docs/HOSTED_ALPHA.md; user requested a shareable alpha and open registration on October 24
+**Evidence / basis:** Live October 24 at https://quantum-quill-alpha.onrender.com; release f0b8bba; docs/HOSTED_ALPHA.md and synthetic launch verification
 
 ### QQ-24 — Write with a full offline workspace
 
@@ -504,14 +504,33 @@ Adapt the writing organizer for RPG campaigns, scripts, plays and historical sto
 
 **Evidence / basis:** User's long-term product vision
 
+### QQ-29 — Private tester feedback
+
+**Available in alpha · Publishing & release**
+
+Report bugs, confusing experiences and ideas from inside QQ without leaving your writing.
+
+- Private report form with category, summary, details and app area; optional browser information and email follow-up.
+- Account-scoped report receipts and recent history. Unsent feedback survives reload in the current browser tab; retries avoid duplicate reports.
+- No prose, project names, screenshots or account secrets are attached automatically. Reports are visible only to their writer and the maintainer.
+
+**Boundary:** Maintainer review uses authenticated Render tooling; there is no admin inbox UI, automatic email notification or live-support response promise yet. Twenty new reports per account per day.
+
+**Acceptance:** Live submission, privacy between accounts, idempotent retry, persisted history and unchanged writing verified; feedback survives the paired database restore.
+
+**Prerequisites:** QQ-01, QQ-23
+
+**Evidence / basis:** docs/FEEDBACK.md; 4 API tests, browser draft/receipt walkthrough and live account-isolation checks; release f0b8bba
+
 ## Project notes
 
 - Later: reconstruct the history of Quantum Quill from its surviving versions, archives and development records. This is a separate storytelling project, not a prerequisite for the alpha.
 - October 23: public GitHub Pages roadmap published; eight actual-app screenshots prepared using original fictional sample content for alpha recruitment. The application itself remains a local alpha.
 - October 24: public GitHub introduction, actual-app screenshots and tester feedback guide published. Open-registration Render alpha is prepared and locally checked; launch is on hold. No live app URL is advertised before verification.
+- October 24: open-registration alpha launched on Render, with private in-app feedback. The user approved $13.55/month base hosting after an earlier hold. SDH Studio, original sources and recovered manuscripts remain unchanged.
 
 ## Maintenance
 
 Edit roadmap.json and run python3 build.py. Do not mark a feature working without evidence for its accepted scope. Update both the checkpoint and validation date when verification actually changes. Preserve historical reports; this roadmap takes precedence over their stale future-work lists.
 
-The roadmap contains no story prose, credentials, database contents or user email. Original sources, import receipts and backups remain private. The roadmap is published separately on GitHub Pages; the writing app and its data remain private.
+The roadmap contains no story prose, credentials, database contents or user email. Original sources, import receipts and backups remain private. The roadmap is published separately on GitHub Pages; application source and each writer’s data remain private.

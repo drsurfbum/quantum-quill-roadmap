@@ -8,7 +8,7 @@ Quantum Quill brings your manuscript, scene plans, characters, places, and resea
 
 ![Quantum Quill's writing workspace with scene navigation, prose, and Story Bible context](media/writing-workspace.jpg)
 
-**Status: early alpha.** The local app works; the separate hosted alpha is prepared but has not launched. A tester URL will be added after hosting is activated and verified. The roadmap and design study are previews, not a hosted copy of the writing app. Screenshots use a fictional demonstration project, *The Lantern Coast*.
+**Status: open alpha.** [Try Quantum Quill](https://quantum-quill-alpha.onrender.com) and register a new account. The hosted alpha starts fresh; local accounts and private manuscripts were not copied. Screenshots below use a fictional demonstration project, *The Lantern Coast*. The roadmap and design study remain separate previews.
 
 ## Plan as much—or as little—as you need
 
@@ -42,7 +42,7 @@ Draft recovery is a safety net, not a complete offline application or a substitu
 
 ## Help test the alpha
 
-When the hosted link is available, anyone with it can register their own account. Begin with a sample story:
+[Open the alpha](https://quantum-quill-alpha.onrender.com), choose **Register**, and create an account. Begin with a sample story:
 
 1. Create a project and add a character and a location to its Story Bible.
 2. Plan a scene—or go straight to Write—and draft a few paragraphs.
@@ -50,7 +50,7 @@ When the hosted link is available, anyone with it can register their own account
 4. Change formatting, switch scenes, reload, and check that the writing remains as expected.
 5. Export a copy and tell us what felt useful, confusing, or missing.
 
-[Report feedback](https://github.com/drsurfbum/quantum-quill-roadmap/issues). Include your browser/device, the steps you took, and what you expected. Public issues are visible to everyone: use sample text and redact account details in screenshots. Report possible security or account-access problems privately to the maintainer through your tester contact channel, rather than posting sensitive details publicly.
+Use **Feedback** inside QQ to send a private bug report, confusing experience, or idea. Your account’s recent reports show receipt numbers and review status. Browser details and email follow-up are optional; manuscript text is never attached automatically. You can also [report public feedback](https://github.com/drsurfbum/quantum-quill-roadmap/issues). Include the steps you took and what you expected. Public issues are visible to everyone: use sample text and redact account details in screenshots. Report possible security or account-access problems privately to the maintainer through your tester contact channel, rather than posting sensitive details publicly.
 
 **Alpha boundaries:** desktop/tablet layouts are the main focus. Email verification, password-reset email, and self-service account deletion are not yet available. Collaboration, AI generation, graph/timeline views, and the legacy whiteboard are not active features. Other storytelling formats—RPG campaigns, scripts, plays, and historical narratives—are future directions, not current promises.
 
