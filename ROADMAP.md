@@ -20,7 +20,7 @@ The alpha preparation passed 383 tests across 37 suites, TypeScript, and the pro
 
 ## Keep in view
 
-- **Preparing an open alpha**: The public GitHub introduction now includes app screenshots and a tester walkthrough. A separate Render app is prepared for open registration; hosting approval and live verification are still required before there is a test link.
+- **Open alpha prepared; launch on hold**: The public GitHub introduction includes app screenshots and a tester walkthrough. The separate Render app is prepared for open registration. Hosting has not been activated; a test link will follow deployment and live verification.
 - **Keep legacy conversion deliberate**: Four older entries still need a destination decision; two classification conflicts and orphan planning records remain preserved. Compatibility reads work. No destructive migration is approved.
 - **A local alpha, with clear boundaries**: The save protections and core workflow are working locally. Full offline app loading, collaboration, a general Notion sync and public deployment are not complete.
 
@@ -409,9 +409,9 @@ Prepare a separate hosted app where testers can register their own accounts and 
 
 - Open registration selected. Dedicated app, PostgreSQL database and persistent uploads are prepared; recovered manuscripts stay local.
 - Fresh-database and production-runtime rehearsal covers saves, conflicts, account isolation, restart persistence and paired restore.
-- Publish the verified tester link after workspace, hosting-cost and live-deployment checks.
+- Use the confirmed Render workspace when launch is authorized; publish the tester link only after live verification.
 
-**Boundary:** Deployment preparation is checked locally; no live tester URL has been verified. Hosting cost and workspace confirmation remain pending. Upstream editor/validation dependency upgrades remain tracked with scoped safeguards.
+**Boundary:** Deployment preparation is checked locally; launch is on hold and no live tester URL exists. Hosting has not been activated. Upstream editor/validation dependency upgrades remain tracked with scoped safeguards.
 
 **Acceptance:** Staging passes real writer flows and account isolation; database/uploads restore is proven; costs and rollback are reviewed before release.
 
@@ -508,7 +508,7 @@ Adapt the writing organizer for RPG campaigns, scripts, plays and historical sto
 
 - Later: reconstruct the history of Quantum Quill from its surviving versions, archives and development records. This is a separate storytelling project, not a prerequisite for the alpha.
 - October 23: public GitHub Pages roadmap published; eight actual-app screenshots prepared using original fictional sample content for alpha recruitment. The application itself remains a local alpha.
-- October 24: public GitHub introduction, actual-app screenshots and tester feedback guide prepared; open-registration Render alpha preparation is in progress. No live app URL is advertised before verification.
+- October 24: public GitHub introduction, actual-app screenshots and tester feedback guide published. Open-registration Render alpha is prepared and locally checked; launch is on hold. No live app URL is advertised before verification.
 
 ## Maintenance
 
