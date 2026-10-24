@@ -1,6 +1,6 @@
 # Quantum Quill feature roadmap
 
-Status checked October 24, 2026. Feature checkpoint: October 24, 2026 (`f0b8bba0c939b477609e2abf44caedaa79e919b8`).
+Status checked October 24, 2026. Feature checkpoint: October 24, 2026 (`7a3f09d5193eb57a3a8e5c5d4f5786568af1ad30`).
 
 A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.
 
@@ -8,7 +8,7 @@ Canonical private repository: https://github.com/drsurfbum/quantum-quill-app
 
 This is a manually maintained snapshot, not live sync. Working locally is not a deployment or main-branch merge claim. No delivery dates or percentage-complete estimate are assigned.
 
-October 24: 387 tests across 38 suites, TypeScript, production build, and an 18-table paired restore rehearsal passed locally. Live alpha checks passed for registration, secure sessions, saving, conflicts, account/image isolation, export, private feedback, and writing/uploads retained across deployment. Source remains on feature branches; this is an alpha release, not a main-branch merge.
+October 24: 391 tests across 38 suites, TypeScript, production build, and an 18-table paired restore rehearsal passed locally, including admin access and status persistence. The public alpha is live; the admin inbox is deployed with owner activation awaiting account setup. Source remains on feature branches, not merged to main.
 
 ## Milestones
 
@@ -513,14 +513,15 @@ Report bugs, confusing experiences and ideas from inside QQ without leaving your
 - Private report form with category, summary, details and app area; optional browser information and email follow-up.
 - Account-scoped report receipts and recent history. Unsent feedback survives reload in the current browser tab; retries avoid duplicate reports.
 - No prose, project names, screenshots or account secrets are attached automatically. Reports are visible only to their writer and the maintainer.
+- Private admin inbox with report search, category/status filters, pagination and detailed review. Status updates appear in the tester’s own report history; stale changes are rejected.
 
-**Boundary:** Maintainer review uses authenticated Render tooling; there is no admin inbox UI, automatic email notification or live-support response promise yet. Twenty new reports per account per day.
+**Boundary:** Admin inbox is deployed and tested; owner access is awaiting hosted-account setup. Access must be explicitly provisioned on the server. No automatic email notifications or live-support response promise. Twenty new reports per account per day.
 
 **Acceptance:** Live submission, privacy between accounts, idempotent retry, persisted history and unchanged writing verified; feedback survives the paired database restore.
 
 **Prerequisites:** QQ-01, QQ-23
 
-**Evidence / basis:** docs/FEEDBACK.md; 4 API tests, browser draft/receipt walkthrough and live account-isolation checks; release f0b8bba
+**Evidence / basis:** Private report release f0b8bba; admin inbox feature 7a3f09d. 391 tests / 38 suites, production PostgreSQL checks, 18-table restore and synthetic browser review passed. See docs/FEEDBACK.md.
 
 ## Project notes
 
