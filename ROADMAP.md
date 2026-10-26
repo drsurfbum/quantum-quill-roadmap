@@ -1,6 +1,6 @@
 # Quantum Quill feature roadmap
 
-Status checked October 26, 2026. Feature checkpoint: October 26, 2026 (`d6fb8f62aa7e2572510b72129a0fb438b380efb0`).
+Status checked October 26, 2026. Feature checkpoint: October 26, 2026 (`6ecad66de57df6b993a8bbbd06688809d43daf67`).
 
 A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.
 
@@ -8,7 +8,7 @@ Canonical private repository: https://github.com/drsurfbum/quantum-quill-app
 
 This is a manually maintained snapshot, not live sync. Working locally is not a deployment or main-branch merge claim. No delivery dates or percentage-complete estimate are assigned.
 
-October 26: QQ-30 first-use tour passed 403 tests across 40 suites, TypeScript, production build, and synthetic desktop/390px browser walkthroughs on codex/first-use-tour at d6fb8f6. It is pushed, not merged or deployed, and is isolated from QQ-14. October 24: QQ-14 is implemented and backed up on codex/workspace-integration. The complete tests, TypeScript, production build and disposable PostgreSQL/restore workflow passed at 6c59300; application code is unchanged in the later browser-test refinements. Real Chromium verification passed 16 checks at a09d6d0, covering all seven types, imported/unknown values, explicit connections and 390px screens. QQ-14 is not merged to main or deployed. The public alpha and maintainer inbox remain at the earlier verified release.
+October 26: QQ-30 first-use tour is live in the alpha at 6ecad66. Exact-release GitHub checks passed: 403 tests / 40 suites, TypeScript, production build and disposable PostgreSQL/upload restore rehearsal. Live verification confirmed the tested bundle, session continuity, navigation/completion/reload/replay/skip and unchanged inspected writing. QQ-14 remains separate, implemented on codex/workspace-integration at a09d6d0 with its previously recorded checks; it is not deployed. Main remains unchanged.
 
 ## Milestones
 
@@ -22,7 +22,7 @@ October 26: QQ-30 first-use tour passed 403 tests across 40 suites, TypeScript, 
 
 - **The open alpha is live**: Create a new account to try Quantum Quill. Use Feedback inside the app for private reports; no GitHub account is needed. Each writer’s account and writing remain private.
 - **Keep legacy conversion deliberate**: Four older entries still need a destination decision; two classification conflicts and orphan planning records remain preserved. Compatibility reads work. No destructive migration is approved.
-- **Feature branches and the live alpha differ**: QQ-14 guided entries and QQ-30 interface tour are implemented on separate private feature branches. Neither is merged or deployed. The hosted alpha remains at the earlier verified release. Full offline app loading, collaboration and general Notion sync remain future work.
+- **Feature branches and the live alpha differ**: QQ-30 interface tour is now available in the hosted alpha. QQ-14 guided Story Bible remains on its separate feature branch and has not been deployed. Full offline app loading, collaboration and general Notion sync remain future work.
 
 ## Features
 
@@ -526,7 +526,7 @@ Report bugs, confusing experiences and ideas from inside QQ without leaving your
 
 ### QQ-30 — Find your way around Quantum Quill
 
-**Working locally · Workspace**
+**Available in alpha · Workspace**
 
 An optional, short first-use tour introduces the workspace with a spotlight and guided navigation.
 
@@ -534,13 +534,13 @@ An optional, short first-use tour introduces the workspace with a spotlight and 
 - Skip, keyboard controls and Help → Replay tour; an empty account can continue after creating its first project through the existing wizard.
 - Account-scoped browser preferences, save/recovery/dialog pauses, responsive target positioning and no tour-created chapters or prose edits.
 
-**Boundary:** Implemented and pushed on codex/first-use-tour; not merged, deployed or combined with QQ-14 guided entries. Preferences are local to each browser, not synced across devices. Native screen-reader and broader browser/device certification remain open.
+**Boundary:** Live in the alpha from codex/writing-first-layout; main and the separate QQ-14 guided-entry work remain unchanged. Preferences are local to each browser, not synced across devices. Native screen-reader and broader browser/device certification remain open.
 
 **Acceptance:** Navigation advances once after the destination loads; Back and replay work; empty and compact layouts remain usable; missing controls provide an exit; save/recovery flows take priority and existing writing stays unchanged.
 
 **Prerequisites:** QQ-01, QQ-08, QQ-10
 
-**Evidence / basis:** d6fb8f6; docs/INTERFACE_TOUR.md. October 26: 403 tests / 40 suites, TypeScript, production build, synthetic desktop/390px walkthrough, completion across reload, account separation and first-project continuation passed. Screenshots retained privately; no hosted data used.
+**Evidence / basis:** Live release 6ecad66; feature d6fb8f6; docs/INTERFACE_TOUR.md. October 26: exact-release CI passed 403 tests / 40 suites, TypeScript, production build and synthetic database/upload restore. Desktop/390px fixture walkthroughs passed. Live tour, reload/replay/skip, session continuity and unchanged inspected prose/formatting verified without editing hosted writing.
 
 ## Project notes
 
@@ -551,6 +551,7 @@ An optional, short first-use tour introduces the workspace with a spotlight and 
 - October 24: private maintainer inbox activated in the hosted alpha. Feedback can be reviewed and its status updated inside QQ; account permissions remain explicitly controlled.
 - October 24: QQ-14 guided Story Bible implemented and backed up on a private feature branch, with full validation and synthetic desktop/compact browser evidence. The public alpha has not been updated with QQ-14; main is unchanged.
 - October 26: first-use interface tour validated locally and pushed to its separate feature branch. Save/recovery guards remain intact. QQ-14 work is preserved separately; neither feature is merged or deployed by this update.
+- October 26: user-approved tour integration released to the live alpha as 6ecad66. QQ-30 is available through the first-use invitation or Help → Replay tour. No schema/configuration change; existing writing and the separate QQ-14 feature branch remain intact.
 
 ## Maintenance
 
