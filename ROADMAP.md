@@ -1,6 +1,6 @@
 # Quantum Quill feature roadmap
 
-Status checked October 24, 2026. Feature checkpoint: October 24, 2026 (`a09d6d099898b843094b8127e5223898dbc1c499`).
+Status checked October 26, 2026. Feature checkpoint: October 26, 2026 (`d6fb8f62aa7e2572510b72129a0fb438b380efb0`).
 
 A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.
 
@@ -8,7 +8,7 @@ Canonical private repository: https://github.com/drsurfbum/quantum-quill-app
 
 This is a manually maintained snapshot, not live sync. Working locally is not a deployment or main-branch merge claim. No delivery dates or percentage-complete estimate are assigned.
 
-October 24: QQ-14 is implemented and backed up on codex/workspace-integration. The complete tests, TypeScript, production build and disposable PostgreSQL/restore workflow passed at 6c59300; application code is unchanged in the later browser-test refinements. Real Chromium verification passed 16 checks at a09d6d0, covering all seven types, imported/unknown values, explicit connections and 390px screens. QQ-14 is not merged to main or deployed. The public alpha and maintainer inbox remain at the earlier verified release.
+October 26: QQ-30 first-use tour passed 403 tests across 40 suites, TypeScript, production build, and synthetic desktop/390px browser walkthroughs on codex/first-use-tour at d6fb8f6. It is pushed, not merged or deployed, and is isolated from QQ-14. October 24: QQ-14 is implemented and backed up on codex/workspace-integration. The complete tests, TypeScript, production build and disposable PostgreSQL/restore workflow passed at 6c59300; application code is unchanged in the later browser-test refinements. Real Chromium verification passed 16 checks at a09d6d0, covering all seven types, imported/unknown values, explicit connections and 390px screens. QQ-14 is not merged to main or deployed. The public alpha and maintainer inbox remain at the earlier verified release.
 
 ## Milestones
 
@@ -22,7 +22,7 @@ October 24: QQ-14 is implemented and backed up on codex/workspace-integration. T
 
 - **The open alpha is live**: Create a new account to try Quantum Quill. Use Feedback inside the app for private reports; no GitHub account is needed. Each writer’s account and writing remain private.
 - **Keep legacy conversion deliberate**: Four older entries still need a destination decision; two classification conflicts and orphan planning records remain preserved. Compatibility reads work. No destructive migration is approved.
-- **Feature branches and the live alpha differ**: QQ-14 guided entries are implemented on a private feature branch. The hosted alpha remains at the earlier release until a separate deployment. Full offline app loading, collaboration and general Notion sync remain future work.
+- **Feature branches and the live alpha differ**: QQ-14 guided entries and QQ-30 interface tour are implemented on separate private feature branches. Neither is merged or deployed. The hosted alpha remains at the earlier verified release. Full offline app loading, collaboration and general Notion sync remain future work.
 
 ## Features
 
@@ -524,6 +524,24 @@ Report bugs, confusing experiences and ideas from inside QQ without leaving your
 
 **Evidence / basis:** Private report release f0b8bba; admin inbox feature 7a3f09d. 391 tests / 38 suites, production PostgreSQL checks, 18-table restore and synthetic browser review passed. Owner access activated on October 24; anonymous access denied. See docs/FEEDBACK.md.
 
+### QQ-30 — Find your way around Quantum Quill
+
+**Working locally · Workspace**
+
+An optional, short first-use tour introduces the workspace with a spotlight and guided navigation.
+
+- Ten steps introduce projects, planning, manuscript navigation, prose, Story Bible, context cards and Help; starting inside a project skips the dashboard step.
+- Skip, keyboard controls and Help → Replay tour; an empty account can continue after creating its first project through the existing wizard.
+- Account-scoped browser preferences, save/recovery/dialog pauses, responsive target positioning and no tour-created chapters or prose edits.
+
+**Boundary:** Implemented and pushed on codex/first-use-tour; not merged, deployed or combined with QQ-14 guided entries. Preferences are local to each browser, not synced across devices. Native screen-reader and broader browser/device certification remain open.
+
+**Acceptance:** Navigation advances once after the destination loads; Back and replay work; empty and compact layouts remain usable; missing controls provide an exit; save/recovery flows take priority and existing writing stays unchanged.
+
+**Prerequisites:** QQ-01, QQ-08, QQ-10
+
+**Evidence / basis:** d6fb8f6; docs/INTERFACE_TOUR.md. October 26: 403 tests / 40 suites, TypeScript, production build, synthetic desktop/390px walkthrough, completion across reload, account separation and first-project continuation passed. Screenshots retained privately; no hosted data used.
+
 ## Project notes
 
 - Later: reconstruct the history of Quantum Quill from its surviving versions, archives and development records. This is a separate storytelling project, not a prerequisite for the alpha.
@@ -532,6 +550,7 @@ Report bugs, confusing experiences and ideas from inside QQ without leaving your
 - October 24: open-registration alpha launched on Render, with private in-app feedback. The user approved $13.55/month base hosting after an earlier hold. SDH Studio, original sources and recovered manuscripts remain unchanged.
 - October 24: private maintainer inbox activated in the hosted alpha. Feedback can be reviewed and its status updated inside QQ; account permissions remain explicitly controlled.
 - October 24: QQ-14 guided Story Bible implemented and backed up on a private feature branch, with full validation and synthetic desktop/compact browser evidence. The public alpha has not been updated with QQ-14; main is unchanged.
+- October 26: first-use interface tour validated locally and pushed to its separate feature branch. Save/recovery guards remain intact. QQ-14 work is preserved separately; neither feature is merged or deployed by this update.
 
 ## Maintenance
 
