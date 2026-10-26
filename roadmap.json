@@ -681,7 +681,8 @@
     "October 24: private maintainer inbox activated in the hosted alpha. Feedback can be reviewed and its status updated inside QQ; account permissions remain explicitly controlled.",
     "October 24: QQ-14 guided Story Bible implemented and backed up on a private feature branch, with full validation and synthetic desktop/compact browser evidence. The public alpha has not been updated with QQ-14; main is unchanged.",
     "October 26: first-use interface tour validated locally and pushed to its separate feature branch. Save/recovery guards remain intact. QQ-14 work is preserved separately; neither feature is merged or deployed by this update.",
-    "October 26: user-approved tour integration released to the live alpha as 6ecad66. QQ-30 is available through the first-use invitation or Help → Replay tour. No schema/configuration change; existing writing and the separate QQ-14 feature branch remain intact."
+    "October 26: user-approved tour integration released to the live alpha as 6ecad66. QQ-30 is available through the first-use invitation or Help → Replay tour. No schema/configuration change; existing writing and the separate QQ-14 feature branch remain intact.",
+    "October 26: quantquill.io is the verified primary alpha address, with HTTPS and a www redirect. The original Render address remains available; application code and writing are unchanged."
   ],
-  "appUrl": "https://quantum-quill-alpha.onrender.com"
+  "appUrl": "https://quantquill.io"
 }
