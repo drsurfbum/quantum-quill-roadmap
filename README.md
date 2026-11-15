@@ -16,11 +16,15 @@ Quantum Quill brings your manuscript, scene plans, characters, places, and resea
 
 Start with a guided New Project Wizard, choose a plot structure, and use the Blueprint Wizard to turn selected plot points into planned chapters and scenes. Add scene summaries and beats in the Outline, then move into prose. You can also start directly with a chapter or scene and plan later. Chapter-level drafts stay intact when you introduce scenes.
 
+Eight plot-structure guides include optional explainer videos and external fallbacks. Watching a guide does not change your selected structure.
+
 ![Chapter and scene planning in the Outline](media/scene-outline.jpg)
 
 ## Keep your world in the writing room
 
 The Story Bible holds seven kinds of entries: **Characters, Groups & Races, Locations, Events, World Elements, Details, and Research**. Guided sections, relationships, backlinks, search, tags, and project images help turn a collection of notes into a usable reference.
+
+Start with just a name and type, then develop the entry through clearly explained optional fields. Examples stay separate from your own writing. The Find dialog supports title-based Boolean searches and scrolls independently on compact screens; physical iPad testing remains a follow-up.
 
 Connect entries to a scene as its viewpoint character, cast, location, or reference material. Link an element inline in the prose and open its card beside the editor to check facts or edit notes without navigating away. The connection scanner finds mentions of **existing** entries and lets you review suggestions before adding links; it does not rewrite your prose or invent new characters.
 
@@ -56,7 +60,7 @@ Use **Feedback** inside QQ to send a private bug report, confusing experience, o
 
 ## About this repository
 
-This is Quantum Quill’s public introduction, feature roadmap, and feedback space. The application source is kept in a separate private repository; this repository does not contain manuscripts, accounts, or an installable copy of the app.
+This is Quantum Quill’s public introduction, feature roadmap, and feedback space. The application source is in the separate [public app repository](https://github.com/drsurfbum/quantum-quill-app); this roadmap repository does not contain manuscripts, accounts, or an installable copy of the app. Each writer’s account and story data remain private.
 
 The roadmap distinguishes working features, partial work, planned improvements, and later ideas. It is a living plan, not a promise of delivery dates. We are also preserving the project’s long development history for a future retrospective.
 
@@ -64,9 +68,11 @@ The roadmap distinguishes working features, partial work, planned improvements, 
 
 Edit `roadmap.json`, then run `python3 build.py`. Review and commit the source, generated `ROADMAP.md`, and `docs/index.html` together. GitHub Pages publishes `/docs` from `main`; `dist/index.html` is an ignored local preview.
 
+The project manager owns roadmap upkeep. Each release or material scope change gets a matching update, and a Monday review checks that feature statuses still match the app, PRs and validation evidence. Historical notes remain dated; a merged change is only marked available in alpha after its deployment is verified.
+
 - `roadmap.json`: reviewed feature data and stable feature IDs.
 - `template.html`: search, filters, direct feature links, expandable details, and print styling.
 - `build.py`: generator and validation, with a restrictive Content Security Policy.
 - `media/`: app screenshots from a synthetic demonstration story.
 
-No external fonts, analytics, API requests, or runtime services are needed by the roadmap. Completed app features are checked and pushed to their feature branches; merging and deployment remain separate. Keep private writing, imports, backups, and credentials out of this repository.
+No external fonts, analytics, API requests, or runtime services are needed by the roadmap. Every repository change needs at least a draft pull request after appropriate checks. New features use separate chats; updates reuse their feature chat. Merging and deployment remain separate decisions. Keep private writing, imports, backups, and credentials out of this repository.

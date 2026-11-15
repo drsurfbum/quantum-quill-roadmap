@@ -34,7 +34,7 @@ assert "__DATA__" not in html and "__CSP__" not in html
 (ROOT / "docs" / "index.html").write_text(html)
 (ROOT / "docs" / ".nojekyll").write_text("")
 
-lines = ["# Quantum Quill feature roadmap", "", f"Status checked {data['checked']}. Feature checkpoint: {data['featureCheckpoint']} (`{data['localCommit']}`).", "", data["summary"], "", f"Canonical private repository: {data['repository']}", "", "This is a manually maintained snapshot, not live sync. Working locally is not a deployment or main-branch merge claim. No delivery dates or percentage-complete estimate are assigned.", "", data["validation"], "", "## Milestones", ""]
+lines = ["# Quantum Quill feature roadmap", "", f"Status checked {data['checked']}. Feature checkpoint: {data['featureCheckpoint']} (`{data['localCommit']}`).", "", data["summary"], "", f"Canonical app repository: {data['repository']}", "", "This is a manually maintained snapshot, not live sync. Working locally is not a deployment or main-branch merge claim. No delivery dates or percentage-complete estimate are assigned.", "", data["validation"], "", "## Milestones", ""]
 for m in data["milestones"]:
     lines += [f"- **{m['id']} — {m['title']} · {m['state']}**: {m['description']}"]
 lines += ["", "## Keep in view", ""]
@@ -46,6 +46,6 @@ for f in features:
     lines += [f"- {s}" for s in f["scope"]]
     lines += ["", f"**Boundary:** {f['boundary']}", "", f"**Acceptance:** {f['acceptance']}", "", f"**Prerequisites:** {', '.join(f['depends']) if f['depends'] else 'None.'}", "", f"**Evidence / basis:** {f['evidence']}", ""]
 lines += ["## Project notes", "", *[f"- {note}" for note in data.get("projectNotes", [])], ""]
-lines += ["## Maintenance", "", "Edit roadmap.json and run python3 build.py. Do not mark a feature working without evidence for its accepted scope. Update both the checkpoint and validation date when verification actually changes. Preserve historical reports; this roadmap takes precedence over their stale future-work lists.", "", "The roadmap contains no story prose, credentials, database contents or user email. Original sources, import receipts and backups remain private. The roadmap is published separately on GitHub Pages; application source and each writer’s data remain private.", ""]
+lines += ["## Maintenance", "", "Edit roadmap.json and run python3 build.py. Do not mark a feature working without evidence for its accepted scope. Update both the checkpoint and validation date when verification actually changes. Preserve historical reports; this roadmap takes precedence over their stale future-work lists.", "", "The roadmap contains no story prose, credentials, database contents or user email. Original sources, import receipts and backups remain private. The roadmap is published separately on GitHub Pages; the application source is public, while each writer’s account and story data remain private.", ""]
 (ROOT / "ROADMAP.md").write_text("\n".join(lines))
 print(f"Built {len(features)} feature cards, {len(data['milestones'])} milestones, HTML and Markdown.")
