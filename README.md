@@ -56,7 +56,7 @@ Use **Feedback** inside QQ to send a private bug report, confusing experience, o
 
 ## About this repository
 
-This is Quantum Quill’s public introduction, feature roadmap, and feedback space. The application source is kept in a separate private repository; this repository does not contain manuscripts, accounts, or an installable copy of the app.
+This is Quantum Quill’s public introduction, feature roadmap, and feedback space. The application source is in the separate [public app repository](https://github.com/drsurfbum/quantum-quill-app); this roadmap repository does not contain manuscripts, accounts, or an installable copy of the app. Each writer’s account and story data remain private.
 
 The roadmap distinguishes working features, partial work, planned improvements, and later ideas. It is a living plan, not a promise of delivery dates. We are also preserving the project’s long development history for a future retrospective.
 
@@ -69,4 +69,4 @@ Edit `roadmap.json`, then run `python3 build.py`. Review and commit the source, 
 - `build.py`: generator and validation, with a restrictive Content Security Policy.
 - `media/`: app screenshots from a synthetic demonstration story.
 
-No external fonts, analytics, API requests, or runtime services are needed by the roadmap. Completed app features are checked and pushed to their feature branches; merging and deployment remain separate. Keep private writing, imports, backups, and credentials out of this repository.
+No external fonts, analytics, API requests, or runtime services are needed by the roadmap. Every repository change needs at least a draft pull request after appropriate checks. New features use separate chats; updates reuse their feature chat. Merging and deployment remain separate decisions. Keep private writing, imports, backups, and credentials out of this repository.

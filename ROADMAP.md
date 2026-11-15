@@ -1,14 +1,14 @@
 # Quantum Quill feature roadmap
 
-Status checked October 26, 2026. Feature checkpoint: October 26, 2026 (`6ecad66de57df6b993a8bbbd06688809d43daf67`).
+Status checked November 15, 2026. Feature checkpoint: November 15, 2026 (`6ecad66de57df6b993a8bbbd06688809d43daf67`).
 
 A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.
 
-Canonical private repository: https://github.com/drsurfbum/quantum-quill-app
+Canonical app repository: https://github.com/drsurfbum/quantum-quill-app
 
 This is a manually maintained snapshot, not live sync. Working locally is not a deployment or main-branch merge claim. No delivery dates or percentage-complete estimate are assigned.
 
-October 26: QQ-30 first-use tour is live in the alpha at 6ecad66. Exact-release GitHub checks passed: 403 tests / 40 suites, TypeScript, production build and disposable PostgreSQL/upload restore rehearsal. Live verification confirmed the tested bundle, session continuity, navigation/completion/reload/replay/skip and unchanged inspected writing. QQ-14 remains separate, implemented on codex/workspace-integration at a09d6d0 with its previously recorded checks; it is not deployed. Main remains unchanged.
+November 15 inventory: public health/login and short-domain forwarding passed; Render still serves the October 26 tour release 6ecad66. Plot-guide videos are merged at 65483de but not deployed. Tablet search PR #3 and local assistant-connection PR #2 are drafts with passing GitHub checks. Guided Story Bible QQ-14 is validated on a separate published branch, without an integration PR. This inventory is not a new combined-release writing test. Physical iPad and full Claude/ChatGPT conversational acceptance remain open.
 
 ## Milestones
 
@@ -20,9 +20,9 @@ October 26: QQ-30 first-use tour is live in the alpha at 6ecad66. Exact-release 
 
 ## Keep in view
 
-- **The open alpha is live**: Create a new account to try Quantum Quill. Use Feedback inside the app for private reports; no GitHub account is needed. Each writer’s account and writing remain private.
+- **The alpha is live; newer work is queued**: The public app still runs the October 26 release. Plot-guide videos are merged but not deployed; tablet search fixes and local assistant access have draft PRs. Passing checks and merging do not by themselves put a feature in the live app.
 - **Keep legacy conversion deliberate**: Four older entries still need a destination decision; two classification conflicts and orphan planning records remain preserved. Compatibility reads work. No destructive migration is approved.
-- **Feature branches and the live alpha differ**: QQ-30 interface tour is now available in the hosted alpha. QQ-14 guided Story Bible remains on its separate feature branch and has not been deployed. Full offline app loading, collaboration and general Notion sync remain future work.
+- **Finish integration before broadening the release**: Guided Story Bible QQ-14 is on its published feature branch, not in the alpha. Reconcile it with the current release and run a sustained writer walkthrough. Version history and a creative word finder are newly requested discovery work.
 
 ## Features
 
@@ -258,13 +258,13 @@ Make it obvious what each element is for, which fields matter first, and how to 
 - Create an unfinished entry with only a name and type; develop it through Start here and optional field groups, with examples that never become authored content.
 - Offer optional connection ideas through the shared picker, retaining specialized fields, imported sources, unknown values and existing save/recovery protections.
 
-**Boundary:** Implemented on private feature branch codex/workspace-integration; not merged to main or deployed to the public alpha. The character workbench, timeline, research library and project-wide scanner remain separate roadmap items. Guidance can be hidden and never requires a questionnaire or completion score.
+**Boundary:** Implemented on published branch codex/workspace-integration; no integration PR or alpha deployment yet. Its older local checkout has preserved edits and must be reconciled carefully. Character development, timeline, research library and project-wide scanning remain separate work.
 
 **Acceptance:** A new writer can create and develop an element without guessing field meaning; every existing field, link and recovered original still round-trips.
 
 **Prerequisites:** QQ-09
 
-**Evidence / basis:** October 24, 2026: private feature code a09d6d099898b843094b8127e5223898dbc1c499. Full stabilization passed at 6c59300 (application source unchanged afterward); all 16 synthetic Chromium checks passed at a09d6d0. Includes regression coverage for partial creation, mounted fields, examples, imports and explicit connections. See docs/GUIDED_STORY_BIBLE.md in the private app repository.
+**Evidence / basis:** November 15 remote verification: docs/GUIDED_STORY_BIBLE.md records full stabilization and restore checks, unchanged field bindings, and 16 successful synthetic Chromium checks. The remote feature branch includes refinements absent from the older local checkout. No new combined-release validation is claimed.
 
 ### QQ-15 — Develop characters with intention
 
@@ -473,20 +473,21 @@ Explore established relationships visually once the library, backlinks and chron
 
 ### QQ-27 — Optional story assistance
 
-**Later · Future formats & tools**
+**First slice working · Future formats & tools**
 
-Explore assistance that supports the writer's decisions without taking ownership of the story.
+Let a writer explicitly connect an external assistant with narrow, revocable access and reviewable edits.
 
-- Begin with explicit, reviewable use cases and data/privacy choices.
-- Separate suggestions from authored facts and manuscript text.
+- Local MCP 0.1.0 candidate with independent project, editing and manuscript permissions; narrow read-only defaults and revocable access.
+- Versioned field guide, bounded reads and revision-checked edits; no automatic manuscript changes.
+- Separate exploratory plot-review tools remain local and are not part of the published candidate.
 
-**Boundary:** No external AI generation or semantic scanner is active. Existing connection scanning is local name matching.
+**Boundary:** Draft PR #2 is not merged or deployed. Hosted assistant access is disabled. Actual Codex client checks passed; full Claude Desktop and ChatGPT conversations remain unverified. Browser access requires a separate supported secure connection. Existing live connection scanning remains local name matching.
 
 **Acceptance:** Suggestions are opt-in, explain their basis and never overwrite prose or establish story facts automatically.
 
 **Prerequisites:** QQ-14, QQ-21
 
-**Evidence / basis:** Later exploration, not a scheduled implementation
+**Evidence / basis:** November 15: https://github.com/drsurfbum/quantum-quill-app/pull/2 at c90f995; GitHub PR checks passed. Recorded validation includes 408 app tests, 16 MCP tests, database/restore checks and fictional Settings walkthrough. Real desktop conversational acceptance is pending.
 
 ### QQ-28 — Beyond the novel
 
@@ -542,6 +543,42 @@ An optional, short first-use tour introduces the workspace with a spotlight and 
 
 **Evidence / basis:** Live release 6ecad66; feature d6fb8f6; docs/INTERFACE_TOUR.md. October 26: exact-release CI passed 403 tests / 40 suites, TypeScript, production build and synthetic database/upload restore. Desktop/390px fixture walkthroughs passed. Live tour, reload/replay/skip, session continuity and unchanged inspected prose/formatting verified without editing hosted writing.
 
+### QQ-31 — Revisit and restore writing versions
+
+**Planned · Writing & recovery**
+
+Make undo and redo easy to find, and let writers inspect and deliberately restore earlier saved chapter or scene versions.
+
+- Audit the existing Write undo/redo controls and shortcuts, including toolbar visibility, selection and navigation behavior.
+- Design durable saved versions with timestamps and previews; comparison and explicit restore should preserve earlier versions.
+- Keep version history distinct from unsaved draft recovery, duplicate chapters and named alternate manuscript drafts.
+
+**Boundary:** Requested November 15; discovery only. The editor already has in-session undo/redo. Persistent version history is not shipped. Storage and retention rules need a bounded design; no automatic restoration or rewriting originals.
+
+**Acceptance:** A writer can undo/redo edits and inspect/restore a saved version without losing current work, formatting or inline references. Restore creates a new current revision, respects account/project access and conflicts, and survives reload.
+
+**Prerequisites:** QQ-01, QQ-06
+
+**Evidence / basis:** Owner request November 15, 2026. Current release source rich-text-editor/menu-bar.tsx already wires editor undo/redo. A separate feature chat is evaluating the durable history design.
+
+### QQ-32 — Find the right word while writing
+
+**Planned · Writing tools**
+
+An in-Write dictionary and thesaurus designed for creative word choice, without leaving the manuscript.
+
+- Look up a selected word or typed query, with definitions and synonyms grouped by meaning.
+- Investigate antonyms, related concepts and usage examples; assess rhymes and sound-based discovery as possible later additions.
+- Keep results in a compact popover or context panel; replacement is an explicit, undoable action that preserves editor selection.
+
+**Boundary:** Requested November 15; discovery only. No package or data provider selected. Review software and dataset licenses, attribution, quality, maintenance and hosting costs separately. Do not send manuscript text to an external provider by default.
+
+**Acceptance:** A writer can find a useful alternative without losing cursor position, formatting, save status or prose space. Results state their source; loading, no-match and unavailable states work. Any replacement is deliberate and undoable.
+
+**Prerequisites:** QQ-07, QQ-08
+
+**Evidence / basis:** Owner request November 15, 2026. Open English WordNet (https://en-word.net/) is one CC-BY 4.0 open-data candidate, not a complete chosen widget; FOSS discovery is underway in its own feature chat.
+
 ## Project notes
 
 - Later: reconstruct the history of Quantum Quill from its surviving versions, archives and development records. This is a separate storytelling project, not a prerequisite for the alpha.
@@ -553,9 +590,14 @@ An optional, short first-use tour introduces the workspace with a spotlight and 
 - October 26: first-use interface tour validated locally and pushed to its separate feature branch. Save/recovery guards remain intact. QQ-14 work is preserved separately; neither feature is merged or deployed by this update.
 - October 26: user-approved tour integration released to the live alpha as 6ecad66. QQ-30 is available through the first-use invitation or Help → Replay tour. No schema/configuration change; existing writing and the separate QQ-14 feature branch remain intact.
 - October 26: quantquill.io is the verified primary alpha address, with HTTPS and a www redirect. The original Render address remains available; application code and writing are unchanged.
+- November 15 PM checkpoint: canonical app repository is public; private manuscripts, account data, backups and credentials remain excluded. Every repository change needs at least a draft PR. New features use separate chats; feature updates reuse their owner chat. Merging and deployment remain separate decisions.
+- November 14–15 release queue: expert plot guides/videos merged in PR #1 but not deployed. Tablet Story Bible search and Boolean filtering are in draft PR #3, with 445 tests and 20 browser cases recorded; physical iPad testing remains open. Local MCP candidate is in draft PR #2; full desktop conversational acceptance remains pending.
+- Local-only queue: Duplicate Chapter, iPad/Android Home Screen help, README screenshot updates and app 1.0.1 bump are prepared but not published or deployed. Separate plot-review experiments remain outside the MCP candidate. Existing publication holds and feature ownership are preserved.
+- November 15: requested durable writing version history/clear undo-redo (QQ-31) and creative dictionary/thesaurus (QQ-32). Discovery is separate from implementation; neither is advertised as available.
+- Historical dated notes above describe their original checkpoints. Current release availability is stated in the latest validation and feature boundaries; this roadmap is a snapshot rather than a live deployment feed.
 
 ## Maintenance
 
 Edit roadmap.json and run python3 build.py. Do not mark a feature working without evidence for its accepted scope. Update both the checkpoint and validation date when verification actually changes. Preserve historical reports; this roadmap takes precedence over their stale future-work lists.
 
-The roadmap contains no story prose, credentials, database contents or user email. Original sources, import receipts and backups remain private. The roadmap is published separately on GitHub Pages; application source and each writer’s data remain private.
+The roadmap contains no story prose, credentials, database contents or user email. Original sources, import receipts and backups remain private. The roadmap is published separately on GitHub Pages; the application source is public, while each writer’s account and story data remain private.
