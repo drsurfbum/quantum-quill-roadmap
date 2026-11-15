@@ -2,12 +2,12 @@
   "title": "Quantum Quill",
   "checked": "November 15, 2026",
   "featureCheckpoint": "November 15, 2026",
-  "localCommit": "6ecad66de57df6b993a8bbbd06688809d43daf67",
-  "remoteCommit": "65483de7ad8a78ec5d81a46cb68f01f8ae318fa4",
+  "localCommit": "d61040956d8eae75d83165a9316a24fd10f699f4",
+  "remoteCommit": "d61040956d8eae75d83165a9316a24fd10f699f4",
   "repository": "https://github.com/drsurfbum/quantum-quill-app",
   "reference": "https://drsurfbum.github.io/bimcraft-SDH/",
   "summary": "A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.",
-  "validation": "November 15 inventory: public health/login and short-domain forwarding passed; Render still serves the October 26 tour release 6ecad66. Plot-guide videos are merged at 65483de but not deployed. Tablet search PR #3 and local assistant-connection PR #2 are drafts with passing GitHub checks. Guided Story Bible QQ-14 is validated on a separate published branch, without an integration PR. This inventory is not a new combined-release writing test. Physical iPad and full Claude/ChatGPT conversational acceptance remain open.",
+  "validation": "November 15 release d610409 is live at https://quantquill.io: tablet Story Bible search, guided entry development and optional plot-guide videos. App PRs #1, #3 and #4 are merged. The combined source passed TypeScript, production build, 464 tests in 44 suites, 16 guided-entry browser checks, 20 WebKit/Chromium search cases and a 4-part writing/conflict/video walkthrough. GitHub stabilization, synthetic PostgreSQL/bootstrap/restore and guided browser checks passed before release. Post-deploy health, anonymous access boundaries and served assets were checked; assets match the tested build. Fresh writing tests used fictional local fixtures, not hosted manuscripts. Physical iPad and sustained real-story acceptance remain open. The local assistant-connection PR #2 is separate and not deployed.",
   "statuses": [
     {
       "id": "alpha",
@@ -51,7 +51,7 @@
       "title": "Protect the writing",
       "description": "Reliable saves, recoverable drafts, ownership and compatible data reads.",
       "state": "Foundation working",
-      "tone": "local",
+      "tone": "alpha",
       "features": [
         "QQ-01",
         "QQ-02",
@@ -64,7 +64,7 @@
       "title": "Finish the novel workflow",
       "description": "Plan, organize, write and export without losing momentum.",
       "state": "Workflow working",
-      "tone": "local",
+      "tone": "alpha",
       "features": [
         "QQ-04",
         "QQ-05",
@@ -79,9 +79,9 @@
     {
       "id": "M2",
       "title": "Make the world easier to build",
-      "description": "Guided entries implemented on a feature branch; character development, research and broader world-building work remain ahead.",
-      "state": "Guided entries on branch",
-      "tone": "partial",
+      "description": "Guided entries and improved library search are in the alpha; character development, research and broader world-building work remain ahead.",
+      "state": "Guided entries in alpha",
+      "tone": "alpha",
       "features": [
         "QQ-14",
         "QQ-15",
@@ -120,10 +120,10 @@
   ],
   "attention": [
     {
-      "title": "The alpha is live; newer work is queued",
-      "text": "The public app still runs the October 26 release. Plot-guide videos are merged but not deployed; tablet search fixes and local assistant access have draft PRs. Passing checks and merging do not by themselves put a feature in the live app.",
-      "label": "Release queue",
-      "feature": "QQ-23"
+      "title": "The reviewed update is live",
+      "text": "Tablet-friendly Story Bible search, guided entries and plot-guide videos are now in the alpha. Save/recovery code and the database schema are unchanged. The roadmap is updated with each release and reviewed every Monday.",
+      "label": "November 15 release",
+      "feature": "QQ-14"
     },
     {
       "title": "Keep legacy conversion deliberate",
@@ -132,10 +132,10 @@
       "feature": "QQ-19"
     },
     {
-      "title": "Finish integration before broadening the release",
-      "text": "Guided Story Bible QQ-14 is on its published feature branch, not in the alpha. Reconcile it with the current release and run a sustained writer walkthrough. Version history and a creative word finder are newly requested discovery work.",
-      "label": "Next review",
-      "feature": "QQ-14"
+      "title": "Test everyday writing on real devices",
+      "text": "Next: a sustained real-story walkthrough, physical iPad/software-keyboard checks and continued dependency maintenance. The separate assistant candidate still needs full desktop conversational acceptance. Version history and the creative word finder remain in discovery.",
+      "label": "Next acceptance work",
+      "feature": "QQ-21"
     }
   ],
   "features": [
@@ -143,7 +143,7 @@
       "id": "QQ-01",
       "title": "Writing you can recover",
       "area": "Writing & safety",
-      "status": "local",
+      "status": "alpha",
       "summary": "Keep drafts through failed saves and reloads, with explicit choices when another tab or device has newer writing.",
       "scope": [
         "Account/project-scoped durable draft journals and serialized autosave.",
@@ -152,7 +152,7 @@
       "boundary": "Draft recovery is implemented. It is not full offline app loading or a complete version-history browser.",
       "acceptance": "Offline edits remain recoverable; reconnect cannot silently replace newer server writing; switching accounts cannot reveal another account's drafts.",
       "depends": [],
-      "evidence": "docs/DRAFT_RECOVERY_AND_DATA_INTEGRITY.md; save, recovery and conflict suites"
+      "evidence": "docs/DRAFT_RECOVERY_AND_DATA_INTEGRITY.md; save, recovery and conflict suites; included in verified alpha release d610409. November 15 regression testing used fictional fixtures; this is not a new per-feature hosted manuscript edit."
     },
     {
       "id": "QQ-02",
@@ -176,7 +176,7 @@
       "id": "QQ-03",
       "title": "Relationships that stay connected",
       "area": "Story Bible",
-      "status": "local",
+      "status": "alpha",
       "summary": "Connect all seven entry types by identity, with roles, context, dates and useful backlinks.",
       "scope": [
         "Shared searchable relationship picker, safe stubs and current target names.",
@@ -187,30 +187,31 @@
       "depends": [
         "QQ-01"
       ],
-      "evidence": "docs/SHARED_RELATIONSHIPS.md; relationship API and field suites"
+      "evidence": "docs/SHARED_RELATIONSHIPS.md; relationship API and field suites; included in verified alpha release d610409. November 15 regression testing used fictional fixtures; this is not a new per-feature hosted manuscript edit."
     },
     {
       "id": "QQ-04",
       "title": "Start with a little guidance",
       "area": "Planning",
-      "status": "local",
+      "status": "alpha",
       "summary": "Use the New Project and Blueprint wizards, or skip planning and go straight to writing.",
       "scope": [
         "Recoverable New Project Wizard and restored Blueprint Wizard.",
-        "Create project structure and scenes without replacing existing prose."
+        "Create project structure and scenes without replacing existing prose.",
+        "Eight plot-structure guides with optional embedded explainer videos and external fallbacks; viewing guidance does not change the selected structure."
       ],
-      "boundary": "The restored flows work; future guidance improvements should reuse their protected drafts.",
+      "boundary": "Planning remains optional and wizard drafts stay protected. External video availability can vary by publisher or region; every guide retains a fallback. Playback of every source was not recertified in this release.",
       "acceptance": "Wizard progress is recoverable and repeatable; direct-to-writing remains a first-class path.",
       "depends": [
         "QQ-01"
       ],
-      "evidence": "docs/WIZARDS_AND_SCENES.md; later stabilization closeout supersedes its old limitations"
+      "evidence": "docs/WIZARDS_AND_SCENES.md; later stabilization closeout supersedes its old limitations; included in verified alpha release d610409. November 15 regression testing used fictional fixtures; this is not a new per-feature hosted manuscript edit. Plot-guide PR #1; combined viewer/selection/close walkthrough passed."
     },
     {
       "id": "QQ-05",
       "title": "From plot point to prose",
       "area": "Planning",
-      "status": "local",
+      "status": "alpha",
       "summary": "Move from Storyboard plot points to Outline scenes, scene story beats and manuscript writing.",
       "scope": [
         "Scene planning and story beats connect the Storyboard, Outline and Write workflows.",
@@ -221,13 +222,13 @@
       "depends": [
         "QQ-04"
       ],
-      "evidence": "docs/SCENE_OUTLINE_WORKFLOW.md; planning and scene-beat tests"
+      "evidence": "docs/SCENE_OUTLINE_WORKFLOW.md; planning and scene-beat tests; included in verified alpha release d610409. November 15 regression testing used fictional fixtures; this is not a new per-feature hosted manuscript edit."
     },
     {
       "id": "QQ-06",
       "title": "Shape the manuscript safely",
       "area": "Planning",
-      "status": "local",
+      "status": "alpha",
       "summary": "Reorder chapters and scenes, move scenes between chapters, and keep their writing intact.",
       "scope": [
         "Persisted chapter/scene ordering with atomic moves and stale-arrangement checks.",
@@ -239,13 +240,13 @@
         "QQ-01",
         "QQ-05"
       ],
-      "evidence": "docs/STABILIZATION_CLOSEOUT.md; manuscript API and PostgreSQL rehearsal"
+      "evidence": "docs/STABILIZATION_CLOSEOUT.md; manuscript API and PostgreSQL rehearsal; included in verified alpha release d610409. November 15 regression testing used fictional fixtures; this is not a new per-feature hosted manuscript edit."
     },
     {
       "id": "QQ-07",
       "title": "A writer's formatting toolkit",
       "area": "Writing & safety",
-      "status": "local",
+      "status": "alpha",
       "summary": "Use fonts, rich formatting and reusable Quill styles without giving up protected saves.",
       "scope": [
         "Font/size, headings, emphasis, color, paragraph controls, lists, tables, images and find/replace.",
@@ -256,49 +257,50 @@
       "depends": [
         "QQ-01"
       ],
-      "evidence": "docs/WRITE_FORMATTING.md; formatting, style and export tests"
+      "evidence": "docs/WRITE_FORMATTING.md; formatting, style and export tests; included in verified alpha release d610409. November 15 regression testing used fictional fixtures; this is not a new per-feature hosted manuscript edit."
     },
     {
       "id": "QQ-08",
       "title": "Give the prose room",
       "area": "Workspace",
-      "status": "local",
+      "status": "alpha",
       "summary": "Keep prose central, with a compact manuscript navigator and separate scene/context panes.",
       "scope": [
         "Shared workspace navigation and a responsive, single-row formatting bar.",
         "Reserved save-status space and context panels that preserve editor state.",
         "A discreet roadmap link in workspace navigation and the dashboard sidebar opens a separate tab without leaving the writing session."
       ],
-      "boundary": "Broader browser, mobile and input-method testing is still needed before a release claim.",
+      "boundary": "Available in alpha. Broad mobile, input-method and physical-device certification remains open; tested compact layouts do not imply full device coverage.",
       "acceptance": "Opening cards or plans does not push prose down, reset the editor or remove formatting tools.",
       "depends": [
         "QQ-07"
       ],
-      "evidence": "docs/WORKSPACE_INTEGRATION.md; workspace writing tests and fixture walkthrough; October 23 roadmap shortcut (0067b97): type check, production build and browser walkthrough"
+      "evidence": "docs/WORKSPACE_INTEGRATION.md; workspace writing tests and fixture walkthrough; October 23 roadmap shortcut (0067b97): type check, production build and browser walkthrough; included in verified alpha release d610409. November 15 regression testing used fictional fixtures; this is not a new per-feature hosted manuscript edit."
     },
     {
       "id": "QQ-09",
       "title": "A readable Story Bible library",
       "area": "Story Bible",
-      "status": "local",
+      "status": "alpha",
       "summary": "Find an entry and work in a focused detail pane instead of navigating oversized category dashboards.",
       "scope": [
         "Seven types, search, filters, stars, archive and sorting.",
-        "Overview, Develop, Connections and preserved imported Source views."
+        "Overview, Develop, Connections and preserved imported Source views.",
+        "Tablet-friendly Find dialog with bounded result scrolling, preserved search focus and title-only Boolean filtering; shared pickers retain the same project boundaries."
       ],
-      "boundary": "Type-specific editors remain complete, but more field guidance and a guided creation journey are still needed.",
+      "boundary": "Guided creation and field help are now delivered in QQ-14. Search passed WebKit and Chromium coverage; physical iPad and its software keyboard still need a device walkthrough.",
       "acceptance": "Filters persist, narrow screens have clear navigation, every field remains available and tab changes preserve unsaved edits.",
       "depends": [
         "QQ-01",
         "QQ-03"
       ],
-      "evidence": "docs/STORY_BIBLE_WORKSPACE.md; library and mounted-editor tests"
+      "evidence": "docs/STORY_BIBLE_WORKSPACE.md; library and mounted-editor tests; included in verified alpha release d610409. November 15 regression testing used fictional fixtures; this is not a new per-feature hosted manuscript edit. Tablet search PR #3; 14 picker and 6 Boolean browser cases passed."
     },
     {
       "id": "QQ-10",
       "title": "Keep the world beside the writing",
       "area": "Workspace",
-      "status": "local",
+      "status": "alpha",
       "summary": "Link elements inline and use interactive cards without leaving the Write workspace.",
       "scope": [
         "Type @ or link selected words; pin viewpoint, cast, locations and references to a scene.",
@@ -310,13 +312,13 @@
         "QQ-03",
         "QQ-08"
       ],
-      "evidence": "docs/WORKSPACE_INTEGRATION.md; docs/SCENE_STORY_BIBLE.md"
+      "evidence": "docs/WORKSPACE_INTEGRATION.md; docs/SCENE_STORY_BIBLE.md; included in verified alpha release d610409. November 15 regression testing used fictional fixtures; this is not a new per-feature hosted manuscript edit."
     },
     {
       "id": "QQ-11",
       "title": "Find missing scene connections",
       "area": "Story Bible",
-      "status": "local",
+      "status": "alpha",
       "summary": "Scan the current scene for mentions of existing entries, then review what should be connected.",
       "scope": [
         "Read live prose, including unsaved text; show excerpts and flag ambiguous names.",
@@ -327,7 +329,7 @@
       "depends": [
         "QQ-10"
       ],
-      "evidence": "docs/SCENE_STORY_BIBLE.md, October 14 addition; 380 tests / 36 suites recorded"
+      "evidence": "docs/SCENE_STORY_BIBLE.md, October 14 addition; 380 tests / 36 suites recorded; included in verified alpha release d610409. November 15 regression testing used fictional fixtures; this is not a new per-feature hosted manuscript edit."
     },
     {
       "id": "QQ-12",
@@ -370,19 +372,19 @@
       "id": "QQ-14",
       "title": "A more guided Story Bible",
       "area": "Story Bible",
-      "status": "local",
+      "status": "alpha",
       "summary": "Make it obvious what each element is for, which fields matter first, and how to develop it.",
       "scope": [
         "Explain the purpose of all seven existing types with concrete examples and overlap guidance, including Details versus Research versus World Elements.",
         "Create an unfinished entry with only a name and type; develop it through Start here and optional field groups, with examples that never become authored content.",
         "Offer optional connection ideas through the shared picker, retaining specialized fields, imported sources, unknown values and existing save/recovery protections."
       ],
-      "boundary": "Implemented on published branch codex/workspace-integration; no integration PR or alpha deployment yet. Its older local checkout has preserved edits and must be reconciled carefully. Character development, timeline, research library and project-wide scanning remain separate work.",
+      "boundary": "Live through reviewed PR #4. All 265 existing field bindings and retained legacy content remain intact. Character development, chronology, research-library expansion and project-wide scanning are separate work. Original feature branches and older local edits are preserved.",
       "acceptance": "A new writer can create and develop an element without guessing field meaning; every existing field, link and recovered original still round-trips.",
       "depends": [
         "QQ-09"
       ],
-      "evidence": "November 15 remote verification: docs/GUIDED_STORY_BIBLE.md records full stabilization and restore checks, unchanged field bindings, and 16 successful synthetic Chromium checks. The remote feature branch includes refinements absent from the older local checkout. No new combined-release validation is claimed."
+      "evidence": "Alpha release d610409, https://github.com/drsurfbum/quantum-quill-app/pull/4; docs/GUIDED_STORY_BIBLE.md and docs/RELEASE_2026_11_15.md. Combined release: 464 tests/44 suites, 265-binding comparison, 16 synthetic Chromium checks across all seven entry types, GitHub production-style database/restore and browser checks passed."
     },
     {
       "id": "QQ-15",
@@ -505,7 +507,7 @@
         "QQ-09",
         "QQ-12"
       ],
-      "evidence": "Existing integration reports document limited walkthroughs; this is the next wider acceptance pass"
+      "evidence": "Existing integration reports document limited walkthroughs; this is the next wider acceptance pass; November 15 adds combined guided-entry, tablet and prose recovery/conflict fixture walkthroughs. Physical devices and everyday multi-session real-story use remain outstanding."
     },
     {
       "id": "QQ-22",
@@ -532,7 +534,7 @@
       "status": "alpha",
       "summary": "A separate hosted app where testers can register their own accounts and try Quantum Quill.",
       "scope": [
-        "Open registration is live on Render with a dedicated app, PostgreSQL database and persistent uploads. Recovered manuscripts stay local.",
+        "Open registration is live on Render with a dedicated app, PostgreSQL database and persistent uploads. Local originals remain preserved; hosted stories stay private to their accounts.",
         "Verified HTTPS sessions, writing saves, conflict rejection, account/image isolation, export and writing/uploads retained across deployment.",
         "Automatic service releases and Blueprint sync are off. The reviewed base hosting cost is $13.55/month; usage overages remain possible."
       ],
@@ -543,7 +545,7 @@
         "QQ-21",
         "QQ-22"
       ],
-      "evidence": "Live October 24 at https://quantum-quill-alpha.onrender.com; release f0b8bba; docs/HOSTED_ALPHA.md and synthetic launch verification"
+      "evidence": "Current verified alpha https://quantquill.io, release d610409 on November 15; launch and account-isolation evidence in docs/HOSTED_ALPHA.md, current checks in docs/RELEASE_2026_11_15.md. No new schema or hosting configuration change."
     },
     {
       "id": "QQ-24",
@@ -666,7 +668,7 @@
         "Skip, keyboard controls and Help → Replay tour; an empty account can continue after creating its first project through the existing wizard.",
         "Account-scoped browser preferences, save/recovery/dialog pauses, responsive target positioning and no tour-created chapters or prose edits."
       ],
-      "boundary": "Live in the alpha from codex/writing-first-layout; main and the separate QQ-14 guided-entry work remain unchanged. Preferences are local to each browser, not synced across devices. Native screen-reader and broader browser/device certification remain open.",
+      "boundary": "Live in the alpha, alongside QQ-14 guided entries. The interface tour and Story Bible guidance remain separate, optional flows. Preferences are local to each browser, not synced across devices. Native screen-reader and broader device certification remain open.",
       "acceptance": "Navigation advances once after the destination loads; Back and replay work; empty and compact layouts remain usable; missing controls provide an exit; save/recovery flows take priority and existing writing stays unchanged.",
       "depends": [
         "QQ-01",
@@ -728,6 +730,11 @@
     "November 14–15 release queue: expert plot guides/videos merged in PR #1 but not deployed. Tablet Story Bible search and Boolean filtering are in draft PR #3, with 445 tests and 20 browser cases recorded; physical iPad testing remains open. Local MCP candidate is in draft PR #2; full desktop conversational acceptance remains pending.",
     "Local-only queue: Duplicate Chapter, iPad/Android Home Screen help, README screenshot updates and app 1.0.1 bump are prepared but not published or deployed. Separate plot-review experiments remain outside the MCP candidate. Existing publication holds and feature ownership are preserved.",
     "November 15: requested durable writing version history/clear undo-redo (QQ-31) and creative dictionary/thesaurus (QQ-32). Discovery is separate from implementation; neither is advertised as available.",
+    "November 15 release: tablet search PR #3 and guided Story Bible PR #4 merged through review, then deployed with plot-video PR #1 as d610409. The deployed tree matches the tested candidate. No writing/save/server/schema/dependency changes were introduced by this integration; previous live 6ecad66 remains the code rollback point.",
+    "November 15 validation: 464 tests/44 suites; TypeScript/build; 16 guided-entry, 20 search and 4 combined writer/video browser checks; GitHub production-style PostgreSQL and paired restore. Live checks are read-only health/auth/asset verification. Fresh browser writing checks used fictional loopback data; no hosted manuscripts were edited.",
+    "PM owns roadmap upkeep after releases and scope changes. Weekly Monday reviews run at 9 a.m. America/Chicago and prepare correction PRs when needed. Recurring reviews do not independently authorize feature merges, deployments or new charges.",
+    "Remaining release follow-ups: physical iPad/software-keyboard acceptance, sustained everyday writer testing and existing dependency advisories. The production audit reports one high Zod and 33 moderate advisories; the existing input-structure limit remains a mitigation, not a resolved dependency upgrade. Track upgrades separately through review.",
+    "Current availability labels reflect deployed scope and existing verification. Some older foundation cards were previously still labeled local; they are now labeled available in alpha. This does not claim broad device certification or replace the remaining acceptance work.",
     "Historical dated notes above describe their original checkpoints. Current release availability is stated in the latest validation and feature boundaries; this roadmap is a snapshot rather than a live deployment feed."
   ],
   "appUrl": "https://quantquill.io"
