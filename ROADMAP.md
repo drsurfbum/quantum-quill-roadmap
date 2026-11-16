@@ -1,6 +1,6 @@
 # Quantum Quill feature roadmap
 
-Status checked November 15, 2026. Feature checkpoint: November 15, 2026 (`d61040956d8eae75d83165a9316a24fd10f699f4`).
+Status checked November 16, 2026. Feature checkpoint: November 16, 2026 (`d61040956d8eae75d83165a9316a24fd10f699f4`).
 
 A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.
 
@@ -8,7 +8,7 @@ Canonical app repository: https://github.com/drsurfbum/quantum-quill-app
 
 This is a manually maintained snapshot, not live sync. Working locally is not a deployment or main-branch merge claim. No delivery dates or percentage-complete estimate are assigned.
 
-November 15 release d610409 is live at https://quantquill.io: tablet Story Bible search, guided entry development and optional plot-guide videos. App PRs #1, #3 and #4 are merged. The combined source passed TypeScript, production build, 464 tests in 44 suites, 16 guided-entry browser checks, 20 WebKit/Chromium search cases and a 4-part writing/conflict/video walkthrough. GitHub stabilization, synthetic PostgreSQL/bootstrap/restore and guided browser checks passed before release. Post-deploy health, anonymous access boundaries and served assets were checked; assets match the tested build. Fresh writing tests used fictional local fixtures, not hosted manuscripts. Physical iPad and sustained real-story acceptance remain open. The local assistant-connection PR #2 is separate and not deployed.
+November 16 PM review: Render and the release branch still run d610409 at https://quantquill.io. Health/login checks passed, anonymous account access was denied, and no application errors were returned for the period since the November 15 deployment. This was a read-only availability review, not a new hosted-writing test. The November 15 release passed 464 tests/44 suites and the documented browser/database/restore checks. Writing history PR #5 (3e082f0) and Word Finder PR #6 (db3ea95) now have passing exact-head GitHub checks, but remain draft and are not deployed. They change shared editor files and have not been tested together. MCP PR #2 remains a separate draft with desktop conversational acceptance outstanding.
 
 ## Milestones
 
@@ -22,7 +22,7 @@ November 15 release d610409 is live at https://quantquill.io: tablet Story Bible
 
 - **The reviewed update is live**: Tablet-friendly Story Bible search, guided entries and plot-guide videos are now in the alpha. Save/recovery code and the database schema are unchanged. The roadmap is updated with each release and reviewed every Monday.
 - **Keep legacy conversion deliberate**: Four older entries still need a destination decision; two classification conflicts and orphan planning records remain preserved. Compatibility reads work. No destructive migration is approved.
-- **Test everyday writing on real devices**: Next: a sustained real-story walkthrough, physical iPad/software-keyboard checks and continued dependency maintenance. The separate assistant candidate still needs full desktop conversational acceptance. Version history and the creative word finder remain in discovery.
+- **Two writer tools are ready for review**: Writing history and the English Word Finder now have tested draft PRs. History retention is dry-run only and has an explicit merge/deploy hold. Review its storage and backup requirements, then test the shared Write toolbar integration before any approved release. Physical iPad and sustained real-story acceptance remain open.
 
 ## Features
 
@@ -547,39 +547,41 @@ An optional, short first-use tour introduces the workspace with a spotlight and 
 
 ### QQ-31 — Revisit and restore writing versions
 
-**Planned · Writing & recovery**
+**Working locally · Writing & recovery**
 
-Make undo and redo easy to find, and let writers inspect and deliberately restore earlier saved chapter or scene versions.
+Visible Undo/Redo and durable chapter or scene history are implemented in a draft PR, with preview, comparison and deliberate restoration.
 
-- Audit the existing Write undo/redo controls and shortcuts, including toolbar visibility, selection and navigation behavior.
-- Design durable saved versions with timestamps and previews; comparison and explicit restore should preserve earlier versions.
-- Keep version history distinct from unsaved draft recovery, duplicate chapters and named alternate manuscript drafts.
+- Visible Undo/Redo, saved prose history, formatted preview/compare and explicit restoration as a new current revision. Existing recovery and account/project/document boundaries remain in force.
+- Keep this version and protected restore checkpoints preserve selected, outgoing and restored versions; exact version download is available.
+- Tiered retention review shows protected/candidate counts and storage estimates. Cleanup is dry-run only: zero versions deleted, no cleanup job and no reduced capture cadence.
+- Named alternate drafts and the separate Duplicate Chapter candidate remain separate features.
 
-**Boundary:** Requested November 15; discovery only. The editor already has in-session undo/redo. Persistent version history is not shipped. Storage and retention rules need a bounded design; no automatic restoration or rewriting originals.
+**Boundary:** Draft PR #5 at 3e082f0 is not merged or deployed; the owner explicitly said to keep that hold. A later approved release needs migrations 0007 and 0008 in order, capacity review and independent paired database/upload backups. Actual expiry needs separate review and implementation. Physical iPad/software-keyboard and assistive-technology acceptance remain open. Combined integration with Word Finder is untested.
 
 **Acceptance:** A writer can undo/redo edits and inspect/restore a saved version without losing current work, formatting or inline references. Restore creates a new current revision, respects account/project access and conflicts, and survives reload.
 
 **Prerequisites:** QQ-01, QQ-06
 
-**Evidence / basis:** Owner request November 15, 2026. Current release source rich-text-editor/menu-bar.tsx already wires editor undo/redo. A separate feature chat is evaluating the durable history design.
+**Evidence / basis:** November 16: https://github.com/drsurfbum/quantum-quill-app/pull/5 at 3e082f0519ae7df7911df3e438514618d6444e37; all five exact-head push/PR GitHub checks passed. Feature handoff records 499 tests/46 suites, TypeScript/build, history browser verification, disposable PostgreSQL migration/protection checks and paired restore of 19 tables. See docs/WRITING_VERSION_HISTORY.md. No fresh hosted manuscript or production-capacity test was performed by this PM review.
 
 ### QQ-32 — Find the right word while writing
 
-**Planned · Writing tools**
+**Working locally · Writing tools**
 
-An in-Write dictionary and thesaurus designed for creative word choice, without leaving the manuscript.
+An English dictionary and thesaurus is implemented inside Write, with sense-grouped results and explicit, undoable replacement.
 
-- Look up a selected word or typed query, with definitions and synonyms grouped by meaning.
-- Investigate antonyms, related concepts and usage examples; assess rhymes and sound-based discovery as possible later additions.
-- Keep results in a compact popover or context panel; replacement is an explicit, undoable action that preserves editor selection.
+- Look up selected text or a typed English word or expression; show definitions, sense-grouped synonyms/antonyms, examples and related concepts.
+- Pinned, attributed Open English WordNet 2025 data is self-hosted as static compressed shards. Lookup runs in the browser; requests use a bucket identifier rather than a lookup word or surrounding manuscript.
+- Choosing a result previews it. Only Replace selection changes prose, preserves supported formatting and creates its own Undo/Redo step. Stale selections, changed scenes and semantic links block unsafe replacement.
+- The original Undo/Redo placement is preserved in this branch; visible history controls belong to QQ-31 and need combined review.
 
-**Boundary:** Requested November 15; discovery only. No package or data provider selected. Review software and dataset licenses, attribution, quality, maintenance and hosting costs separately. Do not send manuscript text to an external provider by default.
+**Boundary:** Draft PR #6 at db3ea95 is not merged or deployed. English only; modern DecompressionStream support is required. Dataset coverage varies; rhymes and sound-based discovery are not delivered. Physical iPad/software-keyboard acceptance and combined testing with writing history remain open. No external lookup provider, new database, hosting service, package dependency or app version bump is included.
 
 **Acceptance:** A writer can find a useful alternative without losing cursor position, formatting, save status or prose space. Results state their source; loading, no-match and unavailable states work. Any replacement is deliberate and undoable.
 
 **Prerequisites:** QQ-07, QQ-08
 
-**Evidence / basis:** Owner request November 15, 2026. Open English WordNet (https://en-word.net/) is one CC-BY 4.0 open-data candidate, not a complete chosen widget; FOSS discovery is underway in its own feature chat.
+**Evidence / basis:** November 16: https://github.com/drsurfbum/quantum-quill-app/pull/6 at db3ea955776556f8d50ae7ea441c34c9c88ae1a2; both stabilization runs and the guided Story Bible PR browser run passed. Feature handoff records 474 tests/46 suites, TypeScript/build, 17 final focused tests, six actual Chromium/WebKit cases plus failed/delayed lookup and scene-switch checks. See docs/WORD_FINDER.md for data provenance, attribution and limitations. These are feature-fixture checks, not a fresh hosted-writing test.
 
 ## Project notes
 
@@ -601,6 +603,11 @@ An in-Write dictionary and thesaurus designed for creative word choice, without 
 - PM owns roadmap upkeep after releases and scope changes. Weekly Monday reviews run at 9 a.m. America/Chicago and prepare correction PRs when needed. Recurring reviews do not independently authorize feature merges, deployments or new charges.
 - Remaining release follow-ups: physical iPad/software-keyboard acceptance, sustained everyday writer testing and existing dependency advisories. The production audit reports one high Zod and 33 moderate advisories; the existing input-structure limit remains a mitigation, not a resolved dependency upgrade. Track upgrades separately through review.
 - Current availability labels reflect deployed scope and existing verification. Some older foundation cards were previously still labeled local; they are now labeled available in alpha. This does not claim broad device certification or replace the remaining acceptance work.
+- November 16 PM review: live release and release-source branch remain d610409; the published roadmap remains the November 15 release snapshot until this correction PR is approved. Public health/login passed, anonymous access remained denied and no application errors were returned since deployment. No new feature merge, deployment or live-data change was made.
+- November 15 afternoon work, reviewed November 16: QQ-31 advanced from discovery to draft PR #5 with visible undo/redo, durable history, Keep this version and protected restore checkpoints. Its retention policy is dry-run only and the explicit no-merge/no-deploy instruction remains. All five exact-head checks passed at 3e082f0.
+- QQ-32 advanced from discovery to draft PR #6 with self-hosted English WordNet lookup and explicit undoable replacement. All three exact-head GitHub checks are now successful at db3ea95, resolving the pending CI noted in the feature chat. Not merged or deployed.
+- PRs #5 and #6 both change rich-text-editor/index.tsx and menu-bar.tsx. Separate passing checks do not validate their combined toolbar, selection, history and save behavior; integrate only in an approved review branch and preserve both feature owners. MCP PR #2 remains separate, with user-assisted desktop conversational acceptance pending.
+- Next PM priorities: a physical iPad and sustained real-story walkthrough; review history retention/capacity/backup readiness without applying expiry; review Word Finder and the shared editor integration. Existing dependency maintenance and the local-only Duplicate Chapter/Home Screen candidates remain tracked, with their original holds.
 - Historical dated notes above describe their original checkpoints. Current release availability is stated in the latest validation and feature boundaries; this roadmap is a snapshot rather than a live deployment feed.
 
 ## Maintenance
