@@ -1,6 +1,6 @@
 # Quantum Quill feature roadmap
 
-Status checked November 16, 2026. Feature checkpoint: November 16, 2026 (`ce88058cbe7611df496552e4fa1f78d3a42ac3bf`).
+Status checked November 18, 2026. Feature checkpoint: November 18, 2026 (`ce88058cbe7611df496552e4fa1f78d3a42ac3bf`).
 
 A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.
 
@@ -8,7 +8,7 @@ Canonical app repository: https://github.com/drsurfbum/quantum-quill-app
 
 This is a manually maintained snapshot, not live sync. Working locally is not a deployment or main-branch merge claim. No delivery dates or percentage-complete estimate are assigned.
 
-November 16 release: writing history PR #5 and Word Finder PR #6 are deployed together at https://quantquill.io as ce88058. All five integration-head checks and all three merged-head workflows passed; the combined suite includes 509 tests/48 suites plus Chromium/WebKit editor, save/recovery and restore checks. The independent paired database/upload backup was restored and verified before additive migrations 0007/0008; repeat runs and old/new application startup passed. Post-deploy original writing/account rows and upload/access files match the backup. HTTPS health, anonymous history access denial and exact deployed app/dictionary asset checks passed. These are release and fixture checks, not a new hosted-manuscript edit or physical iPad acceptance. Automatic releases, storage autoscaling and history deletion remain off. MCP PR #2 remains draft pending desktop conversational acceptance.
+November 18 PM check: the alpha still runs ce88058; public health and anonymous history-access denial passed, and the published roadmap matched the reviewed release artifact. No fresh hosted writing test was performed. MCP development has resumed in its existing feature chat to reconcile PR #2 with this release; current combined checks and desktop conversational acceptance are pending. November 16 release: writing history PR #5 and Word Finder PR #6 are deployed together at https://quantquill.io as ce88058. All five integration-head checks and all three merged-head workflows passed; the combined suite includes 509 tests/48 suites plus Chromium/WebKit editor, save/recovery and restore checks. The independent paired database/upload backup was restored and verified before additive migrations 0007/0008; repeat runs and old/new application startup passed. Post-deploy original writing/account rows and upload/access files match the backup. HTTPS health, anonymous history access denial and exact deployed app/dictionary asset checks passed. These are release and fixture checks, not a new hosted-manuscript edit or physical iPad acceptance. Automatic releases, storage autoscaling and history deletion remain off. MCP PR #2 remains draft pending desktop conversational acceptance.
 
 ## Milestones
 
@@ -23,6 +23,7 @@ November 16 release: writing history PR #5 and Word Finder PR #6 are deployed to
 - **Writing history and Word Finder are live**: Write now includes visible Undo/Redo, saved-version preview and deliberate restoration, plus an English dictionary/thesaurus. Both tools passed combined editor and save-protection checks before release. Existing writing and uploads survived deployment unchanged.
 - **Keep legacy conversion deliberate**: Four older entries still need a destination decision; two classification conflicts and orphan planning records remain preserved. Compatibility reads work. No destructive migration is approved.
 - **Watch history growth; keep testing real writing**: Storage has headroom and the paired backup restore passed. History cleanup is still dry-run only: nothing expires automatically. Monday reviews include storage and backup freshness; physical iPad/software-keyboard and sustained real-story acceptance remain open.
+- **MCP integration is back in progress**: Reconcile the local assistant bridge with the released writing tools, then rerun protection and integration tests. Desktop conversational testing follows with the owner. This work does not enable assistant access to the hosted alpha.
 
 ## Features
 
@@ -483,13 +484,13 @@ Let a writer explicitly connect an external assistant with narrow, revocable acc
 - Versioned field guide, bounded reads and revision-checked edits; no automatic manuscript changes.
 - Separate exploratory plot-review tools remain local and are not part of the published candidate.
 
-**Boundary:** Draft PR #2 is not merged or deployed. Hosted assistant access is disabled. Actual Codex client checks passed; full Claude Desktop and ChatGPT conversations remain unverified. Browser access requires a separate supported secure connection. Existing live connection scanning remains local name matching.
+**Boundary:** Draft PR #2 is not merged or deployed. Integration with the current ce88058 release is in progress; the old candidate now has conflicts and its earlier passing checks do not validate the new combination. Writing history, revision/conflict checks, account/project scope and permission revocation must survive reconciliation. Actual Claude Desktop and ChatGPT conversations remain unverified. Hosted assistant access stays disabled; browser access needs a separately reviewed secure connection.
 
 **Acceptance:** Suggestions are opt-in, explain their basis and never overwrite prose or establish story facts automatically.
 
 **Prerequisites:** QQ-14, QQ-21
 
-**Evidence / basis:** November 15: https://github.com/drsurfbum/quantum-quill-app/pull/2 at c90f995; GitHub PR checks passed. Recorded validation includes 408 app tests, 16 MCP tests, database/restore checks and fictional Settings walkthrough. Real desktop conversational acceptance is pending.
+**Evidence / basis:** November 18: existing feature chat resumed by the owner for conflict resolution and current-release regressions. Published PR #2 remains c90f995 with two passing historical CI runs; local 0dea149 preserves the fictional desktop acceptance fixture. Earlier validation covered 408 app tests, 16 MCP tests, database/restore checks and fictional Settings walkthrough, plus bounded Codex client checks. New combined tests and real desktop conversations are pending; neither is claimed complete. PR: https://github.com/drsurfbum/quantum-quill-app/pull/2.
 
 ### QQ-28 — Beyond the novel
 
@@ -611,6 +612,7 @@ An English dictionary and thesaurus is available inside Write, with sense-groupe
 - November 16 ready-PR follow-up: owner authorized advancing ready PRs. Word Finder PR #6 passed review and merged normally as 3daa3fc, with exact tree equality to the tested feature. App deployment remains separate and Render stays on d610409. Writing history PR #5 is still draft with shared-editor conflicts and release gates; MCP PR #2 still awaits desktop acceptance. Roadmap corrections are being published through roadmap PR #2, with no application/database/account changes or new charges.
 - Historical dated notes above describe their original checkpoints. Current release availability is stated in the latest validation and feature boundaries; this roadmap is a snapshot rather than a live deployment feed.
 - November 16 evening: writing history PR #5 merged after all checks passed; combined release ce88058 is live with Word Finder. The actual independent database/upload backup was restored before reviewed migrations 0007/0008, and original writing/accounts/uploads match after deployment. Storage and provider recovery were reviewed without plan changes; no history deletion or automatic expiry is enabled. Monday PM review now checks capacity and backup freshness. Physical iPad and sustained writer acceptance remain follow-up work.
+- November 18: owner resumed the existing MCP agent to resolve current-release conflicts, rerun tests and prepare the desktop testing handoff. PM owns roadmap updates. No MCP merge, hosted transport, production migration, release tag or deployment is part of this assignment; existing writing safeguards and feature ownership remain in force.
 
 ## Maintenance
 
