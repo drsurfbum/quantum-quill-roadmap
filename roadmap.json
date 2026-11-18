@@ -7,7 +7,7 @@
   "repository": "https://github.com/drsurfbum/quantum-quill-app",
   "reference": "https://drsurfbum.github.io/bimcraft-SDH/",
   "summary": "A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.",
-  "validation": "November 18 PM check: the alpha still runs ce88058; public health and anonymous history-access denial passed, and the published roadmap matched the reviewed release artifact. No fresh hosted writing test was performed. MCP development has resumed in its existing feature chat to reconcile PR #2 with this release; current combined checks and desktop conversational acceptance are pending. November 16 release: writing history PR #5 and Word Finder PR #6 are deployed together at https://quantquill.io as ce88058. All five integration-head checks and all three merged-head workflows passed; the combined suite includes 509 tests/48 suites plus Chromium/WebKit editor, save/recovery and restore checks. The independent paired database/upload backup was restored and verified before additive migrations 0007/0008; repeat runs and old/new application startup passed. Post-deploy original writing/account rows and upload/access files match the backup. HTTPS health, anonymous history access denial and exact deployed app/dictionary asset checks passed. These are release and fixture checks, not a new hosted-manuscript edit or physical iPad acceptance. Automatic releases, storage autoscaling and history deletion remain off. MCP PR #2 remains draft pending desktop conversational acceptance.",
+  "validation": "November 18 PM check: the alpha still runs ce88058; public health and anonymous history-access denial passed, and the published roadmap matched the reviewed release artifact. No fresh hosted writing test was performed. MCP PR #2 is reconciled with this release at d6b77b5. Current local integration checks pass, including MCP edits in writing history and shared revision protections. GitHub stabilization and guided Bible checks pass; combined browser CI is retrying a dependency-download timeout. Actual desktop conversational acceptance remains pending. November 16 release: writing history PR #5 and Word Finder PR #6 are deployed together at https://quantquill.io as ce88058. All five integration-head checks and all three merged-head workflows passed; the combined suite includes 509 tests/48 suites plus Chromium/WebKit editor, save/recovery and restore checks. The independent paired database/upload backup was restored and verified before additive migrations 0007/0008; repeat runs and old/new application startup passed. Post-deploy original writing/account rows and upload/access files match the backup. HTTPS health, anonymous history access denial and exact deployed app/dictionary asset checks passed. These are release and fixture checks, not a new hosted-manuscript edit or physical iPad acceptance. Automatic releases, storage autoscaling and history deletion remain off. MCP PR #2 remains draft pending desktop conversational acceptance.",
   "statuses": [
     {
       "id": "alpha",
@@ -138,9 +138,9 @@
       "feature": "QQ-32"
     },
     {
-      "title": "MCP integration is back in progress",
-      "text": "Reconcile the local assistant bridge with the released writing tools, then rerun protection and integration tests. Desktop conversational testing follows with the owner. This work does not enable assistant access to the hosted alpha.",
-      "label": "November 18 development",
+      "title": "MCP conflicts resolved; desktop testing is next",
+      "text": "The local assistant bridge now works with released writing history and Word Finder in integration tests. Final browser CI is retrying a setup timeout. The owner-assisted desktop conversation tests are the remaining acceptance gate; hosted assistant access stays disabled.",
+      "label": "November 18 integration",
       "feature": "QQ-27"
     }
   ],
@@ -615,15 +615,16 @@
       "scope": [
         "Local MCP 0.1.0 candidate with independent project, editing and manuscript permissions; narrow read-only defaults and revocable access.",
         "Versioned field guide, bounded reads and revision-checked edits; no automatic manuscript changes.",
+        "Assistant chapter/scene edits use the same transactional writing-history and revision checks as ordinary writing; newer edits block stale restoration and revocation is enforced on subsequent calls.",
         "Separate exploratory plot-review tools remain local and are not part of the published candidate."
       ],
-      "boundary": "Draft PR #2 is not merged or deployed. Integration with the current ce88058 release is in progress; the old candidate now has conflicts and its earlier passing checks do not validate the new combination. Writing history, revision/conflict checks, account/project scope and permission revocation must survive reconciliation. Actual Claude Desktop and ChatGPT conversations remain unverified. Hosted assistant access stays disabled; browser access needs a separately reviewed secure connection.",
+      "boundary": "PR #2 is reconciled with the current ce88058 release and published as d6b77b5, but remains draft for actual Claude Desktop and ChatGPT Desktop conversational acceptance. Local integration checks pass; final combined browser CI is retrying a dependency-download timeout. Hosted assistant access remains disabled, and no real database migration or app deployment occurred. Browser-hosted clients require a separately reviewed secure transport.",
       "acceptance": "Suggestions are opt-in, explain their basis and never overwrite prose or establish story facts automatically.",
       "depends": [
         "QQ-14",
         "QQ-21"
       ],
-      "evidence": "November 18: existing feature chat resumed by the owner for conflict resolution and current-release regressions. Published PR #2 remains c90f995 with two passing historical CI runs; local 0dea149 preserves the fictional desktop acceptance fixture. Earlier validation covered 408 app tests, 16 MCP tests, database/restore checks and fictional Settings walkthrough, plus bounded Codex client checks. New combined tests and real desktop conversations are pending; neither is claimed complete. PR: https://github.com/drsurfbum/quantum-quill-app/pull/2."
+      "evidence": "November 18 integration: PR #2 at d6b77b5ea4d5988c424a6fdb9b73f8c415d2aec2; 509 regression tests/48 suites, 16 MCP tests, typecheck/build, combined Chromium/WebKit, real MCP-to-history browser checks, guarded migration/concurrency/rollback and paired restore of 20 tables pass locally. Both GitHub stabilization runs and guided Bible pass; browser retry pending. Undeployed agent-access migration is 0009; deployed history migrations 0007/0008 and immutable bootstrap are unchanged. Installed Codex engine preflight and Claude Code handshake pass within their documented limits; neither certifies a desktop model conversation. https://github.com/drsurfbum/quantum-quill-app/pull/2."
     },
     {
       "id": "QQ-28",
@@ -751,7 +752,9 @@
     "November 16 ready-PR follow-up: owner authorized advancing ready PRs. Word Finder PR #6 passed review and merged normally as 3daa3fc, with exact tree equality to the tested feature. App deployment remains separate and Render stays on d610409. Writing history PR #5 is still draft with shared-editor conflicts and release gates; MCP PR #2 still awaits desktop acceptance. Roadmap corrections are being published through roadmap PR #2, with no application/database/account changes or new charges.",
     "Historical dated notes above describe their original checkpoints. Current release availability is stated in the latest validation and feature boundaries; this roadmap is a snapshot rather than a live deployment feed.",
     "November 16 evening: writing history PR #5 merged after all checks passed; combined release ce88058 is live with Word Finder. The actual independent database/upload backup was restored before reviewed migrations 0007/0008, and original writing/accounts/uploads match after deployment. Storage and provider recovery were reviewed without plan changes; no history deletion or automatic expiry is enabled. Monday PM review now checks capacity and backup freshness. Physical iPad and sustained writer acceptance remain follow-up work.",
-    "November 18: owner resumed the existing MCP agent to resolve current-release conflicts, rerun tests and prepare the desktop testing handoff. PM owns roadmap updates. No MCP merge, hosted transport, production migration, release tag or deployment is part of this assignment; existing writing safeguards and feature ownership remain in force."
+    "November 18: owner resumed the existing MCP agent to resolve current-release conflicts, rerun tests and prepare the desktop testing handoff. PM owns roadmap updates. No MCP merge, hosted transport, production migration, release tag or deployment is part of this assignment; existing writing safeguards and feature ownership remain in force.",
+    "November 18 policy update: the owner removed separate publication approvals for routine roadmap/project-status/roadmap-maintenance updates. PM now reviews, validates, opens or updates the PR, normally merges and verifies publication under standing authorization. PRs, checks, private-data safeguards and explicit change-specific holds remain in force; the Monday review uses the same policy.",
+    "November 18 MCP follow-through: current release merged normally into the existing feature branch as d6b77b5; conflicts resolved and new local writing-history, conflict, permission, browser and paired restore checks passed. Three GitHub checks pass; combined browser CI is retrying an environment dependency-download timeout. No MCP app merge, deployment or desktop conversation acceptance is claimed."
   ],
   "appUrl": "https://quantquill.io"
 }
