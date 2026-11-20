@@ -36,13 +36,16 @@ Connect entries to a scene as its viewpoint character, cast, location, or refere
 
 - Rich formatting: fonts, sizes, headings, lists, colors, alignment, images, tables, find/replace, and more.
 - Quill styles inspired by literary moods, plus reusable custom styles saved to your account.
-- Chapter and scene organization, a focus view, and light/dark themes.
+- Chapter and scene organization, a focus view, and light/dark themes. **Duplicate Chapter** creates an independent copy of the chapter and its scenes; both copies appear in exports.
+- Visible Undo/Redo, saved version history with deliberate restoration, and Word Finder for English definitions and synonyms.
 - Autosave with server revisions, explicit conflict review, and account/project-scoped local draft recovery. Failed saves stay recoverable; recovery offers restore/discard choices.
 - Export **Word, EPUB, HTML, plain text, or JSON**. Preview supports browser printing and Save as PDF.
 
 ![Quill styles and full writing controls](media/quill-styles.jpg)
 
 Draft recovery is a safety net, not a complete offline application or a substitute for exports. Browser storage can be cleared; keep copies of important writing outside the alpha.
+
+For tablet access, open **Help → Add QQ to your Home Screen**, or read the [iPad and Android guide](https://quantquill.io/help/install). It opens separately so your writing stays in place.
 
 ## Help test the alpha
 
