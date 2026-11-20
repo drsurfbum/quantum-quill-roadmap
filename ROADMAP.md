@@ -1,6 +1,6 @@
 # Quantum Quill feature roadmap
 
-Status checked November 18, 2026. Feature checkpoint: November 18, 2026 (`ce88058cbe7611df496552e4fa1f78d3a42ac3bf`).
+Status checked November 20, 2026. Feature checkpoint: November 20, 2026 (`0e5f7b2dd3a5feb779494eefa98422effd28403c`).
 
 A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.
 
@@ -8,7 +8,7 @@ Canonical app repository: https://github.com/drsurfbum/quantum-quill-app
 
 This is a manually maintained snapshot, not live sync. Working locally is not a deployment or main-branch merge claim. No delivery dates or percentage-complete estimate are assigned.
 
-November 18 PM check: the alpha still runs ce88058; public health and anonymous history-access denial passed, and the published roadmap matched the reviewed release artifact. No fresh hosted writing test was performed. MCP PR #2 is reconciled with this release at d6b77b5. Current local integration checks pass, including MCP edits in writing history and shared revision protections. GitHub stabilization and guided Bible checks pass; combined browser CI is retrying a dependency-download timeout. Actual desktop conversational acceptance remains pending. November 16 release: writing history PR #5 and Word Finder PR #6 are deployed together at https://quantquill.io as ce88058. All five integration-head checks and all three merged-head workflows passed; the combined suite includes 509 tests/48 suites plus Chromium/WebKit editor, save/recovery and restore checks. The independent paired database/upload backup was restored and verified before additive migrations 0007/0008; repeat runs and old/new application startup passed. Post-deploy original writing/account rows and upload/access files match the backup. HTTPS health, anonymous history access denial and exact deployed app/dictionary asset checks passed. These are release and fixture checks, not a new hosted-manuscript edit or physical iPad acceptance. Automatic releases, storage autoscaling and history deletion remain off. MCP PR #2 remains draft pending desktop conversational acceptance.
+November 20 release: Duplicate Chapter and the iPad/Android Home Screen guide are deployed at https://quantquill.io as 0e5f7b2 through app PR #7. All four candidate-head GitHub checks passed; the merged file tree exactly matches that tested candidate. Verification includes 527 tests/50 suites, PostgreSQL copy/history/concurrency/rollback, synthetic production startup and 19-table paired restore, and Chromium/WebKit copy/editor/history/save/recovery checks. The chapter menu/dialog pointer-lock defect found during integration is fixed. Live health, public guide/Login navigation, anonymous copy/history-access denial and exact deployed assets were verified. No hosted manuscript was edited for verification. No schema, dependency, retention or hosting-plan change. MCP remains a separate local-only candidate: all four checks pass at 7101b07 against its November 16 base, but actual desktop conversations and current-release compatibility review remain pending. Hosted assistant transport is separate work. Physical device installation and software-keyboard acceptance remain open.
 
 ## Milestones
 
@@ -20,10 +20,10 @@ November 18 PM check: the alpha still runs ce88058; public health and anonymous 
 
 ## Keep in view
 
-- **Writing history and Word Finder are live**: Write now includes visible Undo/Redo, saved-version preview and deliberate restoration, plus an English dictionary/thesaurus. Both tools passed combined editor and save-protection checks before release. Existing writing and uploads survived deployment unchanged.
+- **Duplicate chapters and Home Screen help are live**: Use a chapter’s options menu to create an independent copy with its prose, scenes and references. Help now opens illustrated iPad/Android Home Screen instructions in a separate tab. Writing history, Word Finder and save protections remain in place.
 - **Keep legacy conversion deliberate**: Four older entries still need a destination decision; two classification conflicts and orphan planning records remain preserved. Compatibility reads work. No destructive migration is approved.
 - **Watch history growth; keep testing real writing**: Storage has headroom and the paired backup restore passed. History cleanup is still dry-run only: nothing expires automatically. Monday reviews include storage and backup freshness; physical iPad/software-keyboard and sustained real-story acceptance remain open.
-- **MCP conflicts resolved; desktop testing is next**: The local assistant bridge now works with released writing history and Word Finder in integration tests. Final browser CI is retrying a setup timeout. The owner-assisted desktop conversation tests are the remaining acceptance gate; hosted assistant access stays disabled.
+- **Local assistant checks pass; desktop acceptance remains**: All four exact-head checks pass for the local MCP candidate. Actual Claude/ChatGPT desktop setup and conversations still need owner-assisted testing. Hosted assistant access requires a separate secure connection; it is not enabled by this release.
 
 ## Features
 
@@ -117,18 +117,19 @@ Move from Storyboard plot points to Outline scenes, scene story beats and manusc
 
 **Available in alpha · Planning**
 
-Reorder chapters and scenes, move scenes between chapters, and keep their writing intact.
+Reorder, move and duplicate chapters and scenes while preserving writing and references.
 
 - Persisted chapter/scene ordering with atomic moves and stale-arrangement checks.
 - Safe chapter rename/completion and guarded chapter deletion.
+- Duplicate Chapter saves pending writing first, copies chapter prose or all scenes/plans/beats/valid Bible references, and creates independent revisions and saved history. Retries do not create a second copy; the source remains unchanged.
 
-**Boundary:** Scene deletion and automatic conversion between chapter writing modes are not exposed.
+**Boundary:** Both original and copied chapters appear in exports. Plot links stay with the original; shared Story Bible entries remain shared. This is not a hidden alternate draft. Mixed prose ownership and invalid references block copying. Scene deletion and automatic writing-mode conversion remain unavailable.
 
 **Acceptance:** Moving/reordering preserves prose, scene plans and references; conflicting arrangements are rejected without partial updates.
 
 **Prerequisites:** QQ-01, QQ-05
 
-**Evidence / basis:** docs/STABILIZATION_CLOSEOUT.md; manuscript API and PostgreSQL rehearsal; included in verified alpha release d610409. November 15 regression testing used fictional fixtures; this is not a new per-feature hosted manuscript edit.
+**Evidence / basis:** docs/STABILIZATION_CLOSEOUT.md; manuscript API and PostgreSQL rehearsal; included in verified alpha release d610409. November 15 regression testing used fictional fixtures; this is not a new per-feature hosted manuscript edit. November 20: PR #7 deployed as 0e5f7b2; 527 tests/50 suites, PostgreSQL atomic rollback/idempotency/concurrency and independent history, plus Chromium/WebKit pending-save/copy/undo/redo/restore/source-isolation checks passed. See docs/RELEASE_DUPLICATE_GUIDE_NOV20.md.
 
 ### QQ-07 — A writer's formatting toolkit
 
@@ -485,13 +486,13 @@ Let a writer explicitly connect an external assistant with narrow, revocable acc
 - Assistant chapter/scene edits use the same transactional writing-history and revision checks as ordinary writing; newer edits block stale restoration and revocation is enforced on subsequent calls.
 - Separate exploratory plot-review tools remain local and are not part of the published candidate.
 
-**Boundary:** PR #2 is reconciled with the current ce88058 release and published as d6b77b5, but remains draft for actual Claude Desktop and ChatGPT Desktop conversational acceptance. Local integration checks pass; final combined browser CI is retrying a dependency-download timeout. Hosted assistant access remains disabled, and no real database migration or app deployment occurred. Browser-hosted clients require a separately reviewed secure transport.
+**Boundary:** PR #2 at 7101b07 passed all four final-head GitHub checks against the November 16 ce88058 release. Actual Claude Desktop and ChatGPT Desktop conversations remain the acceptance gate. Hosted assistant access is disabled; a secure hosted transport is separate work. MCP is not included in the Duplicate Chapter/Home Screen release and will need a compatibility review against its updated base before merge.
 
 **Acceptance:** Suggestions are opt-in, explain their basis and never overwrite prose or establish story facts automatically.
 
 **Prerequisites:** QQ-14, QQ-21
 
-**Evidence / basis:** November 18 integration: PR #2 at d6b77b5ea4d5988c424a6fdb9b73f8c415d2aec2; 509 regression tests/48 suites, 16 MCP tests, typecheck/build, combined Chromium/WebKit, real MCP-to-history browser checks, guarded migration/concurrency/rollback and paired restore of 20 tables pass locally. Both GitHub stabilization runs and guided Bible pass; browser retry pending. Undeployed agent-access migration is 0009; deployed history migrations 0007/0008 and immutable bootstrap are unchanged. Installed Codex engine preflight and Claude Code handshake pass within their documented limits; neither certifies a desktop model conversation. https://github.com/drsurfbum/quantum-quill-app/pull/2.
+**Evidence / basis:** November 18: PR #2 head 7101b072bc9acd1b88cc3a16028f17e1a2b2ead4; all four GitHub checks pass, including both stabilization runs, guided Bible and combined Chromium/WebKit history checks. Local evidence includes 509 tests/48 suites, 16 MCP tests, protocol-to-history integration, revision/conflict/revocation checks and paired restore across 20 tables. The prior browser setup timeout was fixed with the pinned official Playwright container without reducing coverage. Migration 0009 is undeployed; deployed 0007/0008 and bootstrap are unchanged. Protocol/RPC checks do not certify desktop conversations. https://github.com/drsurfbum/quantum-quill-app/pull/2.
 
 ### QQ-28 — Beyond the novel
 
@@ -533,19 +534,20 @@ Report bugs, confusing experiences and ideas from inside QQ without leaving your
 
 **Available in alpha · Workspace**
 
-An optional, short first-use tour introduces the workspace with a spotlight and guided navigation.
+Find your way around the workspace with an optional tour and illustrated Home Screen instructions.
 
 - Ten steps introduce projects, planning, manuscript navigation, prose, Story Bible, context cards and Help; starting inside a project skips the dashboard step.
 - Skip, keyboard controls and Help → Replay tour; an empty account can continue after creating its first project through the existing wizard.
 - Account-scoped browser preferences, save/recovery/dialog pauses, responsive target positioning and no tour-created chapters or prose edits.
+- Public iPad Safari/Android Chrome Home Screen guide at /help/install, linked from Login and Help. Help opens a separate tab so writing stays open; all instructions remain readable independently of the illustrations.
 
-**Boundary:** Live in the alpha, alongside QQ-14 guided entries. The interface tour and Story Bible guidance remain separate, optional flows. Preferences are local to each browser, not synced across devices. Native screen-reader and broader device certification remain open.
+**Boundary:** Live in the alpha, alongside QQ-14 guided entries. The interface tour and Story Bible guidance remain separate, optional flows. Preferences are local to each browser, not synced across devices. Native screen-reader and broader device certification remain open. The Home Screen guide documents browser shortcuts; it does not add offline support, native/store installation, a guaranteed icon or persistent sign-in. Actual physical iPad/Android installation remains unverified.
 
 **Acceptance:** Navigation advances once after the destination loads; Back and replay work; empty and compact layouts remain usable; missing controls provide an exit; save/recovery flows take priority and existing writing stays unchanged.
 
 **Prerequisites:** QQ-01, QQ-08, QQ-10
 
-**Evidence / basis:** Live release 6ecad66; feature d6fb8f6; docs/INTERFACE_TOUR.md. October 26: exact-release CI passed 403 tests / 40 suites, TypeScript, production build and synthetic database/upload restore. Desktop/390px fixture walkthroughs passed. Live tour, reload/replay/skip, session continuity and unchanged inspected prose/formatting verified without editing hosted writing.
+**Evidence / basis:** Live release 6ecad66; feature d6fb8f6; docs/INTERFACE_TOUR.md. October 26: exact-release CI passed 403 tests / 40 suites, TypeScript, production build and synthetic database/upload restore. Desktop/390px fixture walkthroughs passed. Live tour, reload/replay/skip, session continuity and unchanged inspected prose/formatting verified without editing hosted writing. November 20: guide released in PR #7 as 0e5f7b2; all ten steps, keyboard controls, responsive/dark/reduced-motion checks pass. Chrome/WebKit verify opening Help while copied-scene writing saves. Public hosted guide and navigation verified anonymously.
 
 ### QQ-31 — Revisit and restore writing versions
 
@@ -556,7 +558,7 @@ Visible Undo/Redo and durable chapter or scene history are available in the alph
 - Visible Undo/Redo, saved prose history, formatted preview/compare and explicit restoration as a new current revision. Existing recovery and account/project/document boundaries remain in force.
 - Keep this version and protected restore checkpoints preserve selected, outgoing and restored versions; exact version download is available.
 - Tiered retention review shows protected/candidate counts and storage estimates. Cleanup is dry-run only: zero versions deleted, no cleanup job and no reduced capture cadence.
-- Named alternate drafts and the separate Duplicate Chapter candidate remain separate features.
+- Named alternate drafts remain future work. Duplicate Chapter is available separately under QQ-06; each copy starts independent saved history on its first changed save.
 
 **Boundary:** Live in ce88058 after shared-editor reconciliation, capacity review, independent paired backup/restore and additive migrations 0007/0008. History begins with changed saves after this release; earlier drafts are not retroactively reconstructed. Retention is dry-run only: actual expiry requires separate review and implementation. Physical iPad/software-keyboard and assistive-technology acceptance remain open. Version history supplements independent backups.
 
@@ -616,6 +618,7 @@ An English dictionary and thesaurus is available inside Write, with sense-groupe
 - November 18: owner resumed the existing MCP agent to resolve current-release conflicts, rerun tests and prepare the desktop testing handoff. PM owns roadmap updates. No MCP merge, hosted transport, production migration, release tag or deployment is part of this assignment; existing writing safeguards and feature ownership remain in force.
 - November 18 policy update: the owner removed separate publication approvals for routine roadmap/project-status/roadmap-maintenance updates. PM now reviews, validates, opens or updates the PR, normally merges and verifies publication under standing authorization. PRs, checks, private-data safeguards and explicit change-specific holds remain in force; the Monday review uses the same policy.
 - November 18 MCP follow-through: current release merged normally into the existing feature branch as d6b77b5; conflicts resolved and new local writing-history, conflict, permission, browser and paired restore checks passed. Three GitHub checks pass; combined browser CI is retrying an environment dependency-download timeout. No MCP app merge, deployment or desktop conversation acceptance is claimed.
+- November 20: owner authorized the two-feature release, superseding the older Duplicate Chapter/Home Screen local-only publication holds. Normal merges preserve c11753e and b678b72, then PR #7 released as 0e5f7b2. No MCP code or migrations were included; originals, feature ownership and private backups remain intact. Local-only README-image and patch-version work and exploratory plot-review tools remain separate. The November 18 MCP browser setup timeout is resolved: all four checks pass at 7101b07; desktop acceptance is still pending.
 
 ## Maintenance
 
