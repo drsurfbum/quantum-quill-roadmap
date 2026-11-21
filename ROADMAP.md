@@ -1,6 +1,6 @@
 # Quantum Quill feature roadmap
 
-Status checked November 20, 2026. Feature checkpoint: November 20, 2026 (`0e5f7b2dd3a5feb779494eefa98422effd28403c`).
+Status checked November 21, 2026. Feature checkpoint: November 20, 2026 (`0e5f7b2dd3a5feb779494eefa98422effd28403c`).
 
 A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.
 
@@ -24,7 +24,7 @@ November 20 release: Duplicate Chapter and the iPad/Android Home Screen guide ar
 - **Keep legacy conversion deliberate**: Four older entries still need a destination decision; two classification conflicts and orphan planning records remain preserved. Compatibility reads work. No destructive migration is approved.
 - **Watch history growth; keep testing real writing**: Storage has headroom and the paired backup restore passed. History cleanup is still dry-run only: nothing expires automatically. Monday reviews include storage and backup freshness; physical iPad/software-keyboard and sustained real-story acceptance remain open.
 - **Local assistant checks pass; desktop acceptance remains**: All four exact-head checks pass for the local MCP candidate. Actual Claude/ChatGPT desktop setup and conversations still need owner-assisted testing. Hosted assistant access requires a separate secure connection; it is not enabled by this release.
-- **Build a read-only workspace companion**: A new feature chat is implementing the approved assistant direction across all five workspaces. It will answer and suggest with selected context while leaving story records unchanged. Provider configuration, usage limits, writing-protection checks and PR review are part of delivery.
+- **Workspace assistant is ready for PR review**: The read-only companion is implemented across all five workspaces. PR #8 has all four checks passing, including writing-protection coverage. Review can proceed now; live generation still needs dedicated provider configuration and an approved allowance. Physical iPad and live-provider acceptance remain open.
 
 ## Features
 
@@ -590,7 +590,7 @@ An English dictionary and thesaurus is available inside Write, with sense-groupe
 
 ### QQ-33 — Workspace assistant (read-only)
 
-**Planned · Writing & planning**
+**Working locally · Writing & planning**
 
 Discuss a scene, develop a character or plan the next session from a companion panel inside Quantum Quill.
 
@@ -599,13 +599,13 @@ Discuss a scene, develop a character or plan the next session from a companion p
 - Use the existing context-panel space so prose stays prominent, with a dismissible narrow-screen panel and usable message composer.
 - Account/project-scoped conversations, server-enforced read-only access, bounded provider requests and enforceable usage limits.
 
-**Boundary:** Implementation has started in a dedicated feature chat following an approved fictional design study. No application capability is validated or deployed yet. Mockup preview/apply/undo controls illustrate a later editing capability and are excluded from this read-only release. Provider setup and an initial usage allowance remain release configuration decisions; external MCP remains separate under QQ-27.
+**Boundary:** Ready for code and product review in app PR #8 at fa928ff; not merged or deployed. Browser and server validation used deterministic provider fixtures. Live generation stays disabled until a dedicated QQ provider key, private usage ledger and account/service allowances are configured. Live-provider quality and physical iPad/software-keyboard behavior remain unverified. Chats stay in tab memory; the separate usage ledger stores no story text. No story-editing tools, application schema migration or MCP dependency is included.
 
 **Acceptance:** All five workspaces support a useful contextual conversation without modifying story records. Context and manuscript inclusion are explicit; account/project switches cannot leak conversations or late responses. Existing formatting, autosave, offline recovery, revisions, history, inline links and Word Finder remain intact. Appropriate fixture/browser checks and a reviewed PR precede deployment.
 
 **Prerequisites:** QQ-01, QQ-02, QQ-08, QQ-14, QQ-21
 
-**Evidence / basis:** November 20: owner approved the five-workspace HTML direction and commissioned read-only implementation in a new feature chat. The separate mockup uses fictional content and scripted responses; Chromium/WebKit checks cover its interactions and narrow layouts. Those checks validate the design study only, not a working AI integration. No feature PR, provider call or deployment is claimed.
+**Evidence / basis:** November 21: PM verified https://github.com/drsurfbum/quantum-quill-app/pull/8 is open, ready (not draft), mergeable and has all four GitHub checks passing on fa928ff1d49606c31c62549b4ede6be0590708b7. The feature handoff reports 533 local tests in 51 suites, TypeScript/build, byte-for-byte equality of all 18 PostgreSQL tables after assistant reads, and Chromium/WebKit checks across all five workspaces. Writing/history/recovery, revision conflicts, formatting, Word Finder, duplication, rapid typing, editor identity/caret/focus, cancellation and account/project isolation are covered. Seven fictional-fixture screenshots and operator documentation accompany the PR. Code review and release activation remain separate.
 
 ## Project notes
 
@@ -640,6 +640,7 @@ Discuss a scene, develop a character or plan the next session from a companion p
 - November 18 MCP follow-through: current release merged normally into the existing feature branch as d6b77b5; conflicts resolved and new local writing-history, conflict, permission, browser and paired restore checks passed. Three GitHub checks pass; combined browser CI is retrying an environment dependency-download timeout. No MCP app merge, deployment or desktop conversation acceptance is claimed.
 - November 20: owner authorized the two-feature release, superseding the older Duplicate Chapter/Home Screen local-only publication holds. Normal merges preserve c11753e and b678b72, then PR #7 released as 0e5f7b2. No MCP code or migrations were included; originals, feature ownership and private backups remain intact. Local-only README-image and patch-version work and exploratory plot-review tools remain separate. The November 18 MCP browser setup timeout is resolved: all four checks pass at 7101b07; desktop acceptance is still pending.
 - November 20: owner approved the embedded-assistant mockups and requested a dedicated feature chat to build a read-only companion across Write, Outline, Storyboard, Story Bible and Overview. QQ-33 tracks this work separately from QQ-27 external MCP access. No editing/apply tools are included. Existing writing/save protections and PR-before-deployment workflow are mandatory; the design study is not a live AI feature.
+- November 21: the QQ-33 feature chat completed its implementation handoff. App PR #8 is ready for review at fa928ff with all four GitHub checks passing; local validation reports 533 tests/51 suites plus unchanged story tables and Chromium/WebKit writing regressions. PM verified the PR and checks, not a production release or completed code review. The proposed pilot allowance is 20 provider attempts per UTC day across QQ, at most four per writer; it is not yet approved or configured. No live provider call, app merge or deployment is claimed. QQ-27 external MCP remains separately owned.
 
 ## Maintenance
 
