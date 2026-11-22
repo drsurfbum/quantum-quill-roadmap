@@ -1,6 +1,6 @@
 # Quantum Quill feature roadmap
 
-Status checked November 21, 2026. Feature checkpoint: November 20, 2026 (`0e5f7b2dd3a5feb779494eefa98422effd28403c`).
+Status checked November 22, 2026. Feature checkpoint: November 20, 2026 (`0e5f7b2dd3a5feb779494eefa98422effd28403c`).
 
 A dependable place to plan a story, build its world, and keep writing. Novel writing comes first; the foundations should also serve other kinds of storytelling.
 
@@ -24,7 +24,7 @@ November 20 release: Duplicate Chapter and the iPad/Android Home Screen guide ar
 - **Keep legacy conversion deliberate**: Four older entries still need a destination decision; two classification conflicts and orphan planning records remain preserved. Compatibility reads work. No destructive migration is approved.
 - **Watch history growth; keep testing real writing**: Storage has headroom and the paired backup restore passed. History cleanup is still dry-run only: nothing expires automatically. Monday reviews include storage and backup freshness; physical iPad/software-keyboard and sustained real-story acceptance remain open.
 - **Local assistant checks pass; desktop acceptance remains**: All four exact-head checks pass for the local MCP candidate. Actual Claude/ChatGPT desktop setup and conversations still need owner-assisted testing. Hosted assistant access requires a separate secure connection; it is not enabled by this release.
-- **Read-only workspace assistant is merged**: PR #8 passed review and all four final checks. The companion is integrated across all five workspaces, with writing protections intact. Live activation still needs a dedicated provider key and approved usage allowance, followed by a real-provider check. The current alpha is unchanged.
+- **Workspace assistant: personal provider connections next**: PR #8 passed review and all four final checks. The assistant is merged, but the alpha is unchanged. The next scope lets writers use their own OpenAI or Claude access. Connection method and provider availability are being resolved before implementation; the proposed QQ-funded pilot is on hold.
 
 ## Features
 
@@ -598,10 +598,11 @@ Discuss a scene, develop a character or plan the next session from a companion p
 - Read-only answers and suggestions with inspectable sources. Manuscript inclusion is separate and deliberate; no automatic whole-project attachment.
 - Use the existing context-panel space so prose stays prominent, with a dismissible narrow-screen panel and usable message composer.
 - Account/project-scoped conversations, server-enforced read-only access, bounded provider requests and enforceable usage limits.
+- Let each writer connect their own OpenAI or Claude provider access; preserve explicit source sharing and read-only behavior. API-key versus subscription-login delivery is being decided against provider support for hosted apps.
 
-**Boundary:** Reviewed and merged through app PR #8 as e4a522b; not deployed or enabled in the alpha. The merged file tree exactly matches tested candidate 8615ad4. Live generation remains disabled until a dedicated QQ provider key, a private persistent usage ledger and approved total/per-writer allowances are configured. Live-provider quality and physical iPad/software-keyboard behavior remain unverified. Chats stay in tab memory. No story-editing tools, application schema migration or MCP dependency.
+**Boundary:** Reviewed and merged through app PR #8 as e4a522b; not deployed or enabled in the alpha. The merged file tree exactly matches tested candidate 8615ad4. November 22 direction: user-owned OpenAI or Claude access replaces the proposed QQ-funded pilot. The merged adapter still supports only a server-owned OpenAI key; personal connections and Claude support are not implemented. Hosted ChatGPT subscription access requires provider approval; Claude documents API-key authentication for third-party embedded apps. The first supported connection method is pending clarification. Live-provider quality and physical iPad/software-keyboard behavior remain unverified. Chats stay in tab memory. No story-editing tools, application schema migration or MCP dependency.
 
-**Acceptance:** All five workspaces support a useful contextual conversation without modifying story records. Context and manuscript inclusion are explicit; account/project switches cannot leak conversations or late responses. Existing formatting, autosave, offline recovery, revisions, history, inline links and Word Finder remain intact. Appropriate fixture/browser checks and a reviewed PR precede deployment.
+**Acceptance:** All five workspaces support a useful contextual conversation without modifying story records. Context and manuscript inclusion are explicit; account/project switches cannot leak conversations or late responses. Existing formatting, autosave, offline recovery, revisions, history, inline links and Word Finder remain intact. Appropriate fixture/browser checks and a reviewed PR precede deployment. Personal connections must isolate credentials by account, support disconnect/revocation, clearly identify the provider and billing method, and never silently fall back to QQ-funded usage.
 
 **Prerequisites:** QQ-01, QQ-02, QQ-08, QQ-14, QQ-21
 
@@ -642,6 +643,7 @@ Discuss a scene, develop a character or plan the next session from a companion p
 - November 20: owner approved the embedded-assistant mockups and requested a dedicated feature chat to build a read-only companion across Write, Outline, Storyboard, Story Bible and Overview. QQ-33 tracks this work separately from QQ-27 external MCP access. No editing/apply tools are included. Existing writing/save protections and PR-before-deployment workflow are mandatory; the design study is not a live AI feature.
 - November 21: the QQ-33 feature chat completed its implementation handoff. App PR #8 is ready for review at fa928ff with all four GitHub checks passing; local validation reports 533 tests/51 suites plus unchanged story tables and Chromium/WebKit writing regressions. PM verified the PR and checks, not a production release or completed code review. The proposed pilot allowance is 20 provider attempts per UTC day across QQ, at most four per writer; it is not yet approved or configured. No live provider call, app merge or deployment is claimed. QQ-27 external MCP remains separately owned.
 - November 21: owner authorized PM review, straightforward fixes and merge of QQ-33. Normal merge e4a522b preserves final candidate 8615ad4 after all four GitHub checks passed. Review fixed modal scroll containment, proved PostgreSQL rejects writes through assistant read snapshots, and repaired a test database cleanup race discovered after chapter-copy assertions had passed. No application save/history code, migration or dependency changed. The merged tree matches the tested candidate. Render still serves 0e5f7b2 with auto-deploy off. Provider key/allowance, real-model testing and physical iPad keyboard acceptance remain open; no assistant activation or deployment is claimed.
+- November 22: owner requested personal OpenAI or Claude connections for QQ-33. This supersedes the proposed shared QQ-key pilot. Verified official documentation: ChatGPT plan usage in a remotely hosted app requires provider access approval (https://developers.openai.com/siwc/token-sharing-open-source); Anthropic directs third-party embedded apps to API keys rather than Claude.ai login (https://code.claude.com/docs/en/legal-and-compliance). Personal API keys versus existing subscriptions is pending owner clarification. No personal-provider implementation, account application, credentials, provider usage or live deployment is claimed. Existing read-only/source selection and writing/save protections remain requirements.
 
 ## Maintenance
 
